@@ -1,0 +1,149 @@
+<style>
+  .percentage {
+    font-size: 58px;
+    line-height:58px;
+    font-weight: 400;
+    color: #666;
+  }
+  .row p{
+    font-size: 20px;
+  }
+</style>
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="container">
+  <h1>Mis pagos <br>
+    <small>Visualiza tus estadisticas de pagos</small>
+  </h1>
+  <div class="row"><br><br>
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-5 animated fadeIn">
+              <div class="percentage">51% </div>
+            </div>
+            <div class="col-xs-7">
+              <p>Pagos totales en efectivo y transferencias</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-warning">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-5 animated fadeIn">
+              <div class="percentage">49%</div>
+            </div>
+            <div class="col-xs-7">
+              <p>Pagos totales con tarjeta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div id="pie" style="height: 400px"></div>
+    </div>
+  </div>
+
+  <br>
+  <div id="barras-simples" style="height: 400px"></div>
+</div>
+<script>
+  Highcharts.chart('barras-simples', {
+    chart: {
+      type: 'column',
+      options3d: {
+        //enabled: true,
+        alpha: 15,
+        beta: 15,
+        viewDistance: 25,
+        depth: 40
+      }
+    },
+
+    title: {
+      text: 'Share of wallet de las transacciones del cliente (a lo largo del tiempo)'
+    },
+    colors: ['#002663', '#cccccc'],
+
+
+    xAxis: {
+      categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    },
+
+    yAxis: {
+      allowDecimals: false,
+      min: 0,
+      max: 100,
+      title: {
+        text: 'Porcentaje'
+      }
+    },
+
+    tooltip: {
+      headerFormat: '<b>{point.key}</b><br>',
+      pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: {point.y} / {point.stackTotal}'
+    },
+
+    plotOptions: {
+      column: {
+        stacking: 'normal',
+        depth: 40
+      }
+    },
+
+    series: [
+      {
+        name: 'Amex',
+        data: [20, 30, 28, 20, 17, 24, 18, 11, 23, 18, 17, 24  ],
+        stack: 'Amex'
+      },
+      {
+        name: 'Otros',
+        data: [80, 70, 72, 80, 83, 76, 82, 89, 77, 82, 83, 76],
+        stack: 'Otros'
+      }
+
+    ]
+  });
+</script>
+
+<script>
+  Highcharts.chart('pie', {
+    chart: {
+      type: 'pie',
+      options3d: {
+        enabled: true,
+        alpha: 45,
+        beta: 0
+      }
+    },
+    title: {
+      text: 'Share of wallet de las transacciones del cliente (anual)'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    colors: ['#cccccc', '#002663'],
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        depth: 35,
+        dataLabels: {
+          enabled: true,
+          format: '{point.name}'
+        }
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Market share',
+      data: [
+        ['Otros', 73],
+        ['Amex', 27]
+      ]
+    }]
+  });
+</script>

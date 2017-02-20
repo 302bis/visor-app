@@ -1,0 +1,105 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<br><br><br>
+<div class="container">
+  <h1>Mis clientes</h1>
+  <br>
+  <div id="grafica" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+  <br><br>
+</div>
+<div class="container-fluid"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <h2>¿Cómo obtener más ganancias?</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam dolore facere nulla similique magni nobis beatae eveniet deserunt quisquam nihil autem. Maxime iste voluptate laboriosam veritatis possimus qui molestias numquam officia deleniti a! Debitis itaque tempora vel quas quidem natus fugit alias aliquam maiores deserunt quibusdam error laboriosam aut.</p>
+      <span class="btn btn-default">Leer más</span>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h2>¿Cómo optimizar nuestro flujo de efectivo?</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam dolore facere nulla similique magni nobis beatae eveniet deserunt quisquam nihil autem. Maxime iste voluptate laboriosam veritatis possimus qui molestias numquam officia deleniti a! Debitis itaque tempora vel quas quidem natus fugit alias aliquam maiores deserunt quibusdam error laboriosam aut.</p>
+      <span class="btn btn-default">Leer más</span>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h2>Entiende tu negocio con <p>Visor analíticos</p></h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam dolore facere nulla similique magni nobis beatae eveniet deserunt quisquam nihil autem. Maxime iste voluptate laboriosam veritatis possimus qui molestias numquam officia deleniti a! Debitis itaque tempora vel quas quidem natus fugit alias aliquam maiores deserunt quibusdam error laboriosam aut.</p>
+      <span class="btn btn-default">Leer más</span>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<script>
+  Highcharts.chart('grafica', {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Composición de clientes'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      type: 'category',
+      labels: {
+        rotation: -90,
+        style: {
+          fontSize: '13px',
+          fontFamily: 'Verdana, sans-serif'
+        }
+      }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Pesos (millions)'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    tooltip: {
+      pointFormat: ': <b>{point.y:.1f} millions</b>'
+    },
+    series: [{
+      name: 'Population',
+      data: [
+        ['IPCOM INSTALACIONES...', 23.7],
+        ['SERVICIOS PROFECIONALES DE...', 16.1],
+        ['ENDENEO DE MEXICO', 14.2],
+        ['NUEVA FRABRICA NACIONAL DE...', 14.0],
+        ['HOTELERA CAMCO', 12.5],
+        ['NUEVA FRABRICA NACIONAL DE...', 14.0],
+        ['PINEDA MARIQUE JOSE', 11.8],
+        ['GARCIA SANTOS JAVIER', 11.7],
+        ['PATIO SANCHEZ OSCAR', 11.1],
+        ['PINEDA CONTRERAS JOSE', 11.1],
+        ['IRIA FLAVIA', 10.5],
+        ['CONSTRUCCIONES E INGER...', 10.4],
+        ['AGENCIA FUNERARIA GAYOSSO', 10.0],
+        ['RUBIO ZAPATA MARIA DE LOS...', 9.3],
+        ['FABRICA DE SANDALIAS', 9.3],
+        ['PINEDA MANRIQUE SILVIA DIANA', 9.0],
+        ['SISTEMAS HORMIGA', 8.9],
+        ['ALEMAN RUBIO MIGUEL ANGEL', 8.9],
+        ['FLORES ALEMAN MARIA DEL...', 8.9],
+        ['JARDINES DEL TIEMPO', 8.9],
+        ['DU PONT MEXICO', 8.9],
+        ['CUCADALLI A.C.', 8.9],
+        ['INSTITUTO TECNOLOGICO Y DE...', 8.9],
+        ['KINGSBERG MARGOLIS SAMUEL...', 8.9]
+      ],
+      dataLabels: {
+        enabled: true,
+        rotation: -90,
+        color: '#FFFFFF',
+        align: 'right',
+        format: '{point.y:.1f}', // one decimal
+        y: 10, // 10 pixels down from the top
+        style: {
+          fontSize: '13px',
+          fontFamily: 'Verdana, sans-serif'
+        }
+      }
+    }]
+  });
+
+</script>
+

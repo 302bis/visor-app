@@ -1,0 +1,180 @@
+.panel.panel-default {
+  cursor: pointer;
+}
+.img-ejecutivo {
+  /*background: silver;*/
+  background: url(images/img_visor/executive.svg) no-repeat;
+}
+.panel-footer-visor {
+  background: #9B2038;
+  color: white;
+}
+.panel-body-visor {
+  background: #00a2f3;
+  color: white;
+  text-align: center;
+}
+.right-col .panel-body {
+  min-height: 150px;
+}
+
+.right-col .panel-body.special{
+  background: url(images/img_visor/sample_04.png) no-repeat;
+  background-size: cover;
+  min-height: 220px;
+  /*opacity: 0.1;*/
+  cursor: block;
+}
+.right-col .panel-body.sub-menu{
+  min-height: 50px;
+}
+
+.panel-footer {
+  height: 70px;
+  font-size: 18px;
+}
+.panel-ayuda {
+  height: 220px;
+}
+.panel-ayuda img {
+  padding: 15px;
+}
+.flecha-home {
+  width: 80px;
+}
+.user-logo {
+  width: 90px;
+  /*padding: 20px;*/
+}
+.comunidad-visor {
+  background: url(images/img_visor/mask_group.png) no-repeat;
+  background-size: cover;
+  height: 240px;
+}
+.panel-footer-comunidad {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  height: 90px;
+  font-size: 26px;
+  border:none;
+}
+.arbol-visor {
+  background: url(images/img_visor/arbol.png) no-repeat;
+  background-size: cover;
+  height: 240px;
+  font-weight: bold;
+
+}
+.ayuda-ciec {
+  cursor: pointer;
+  color: #00a2f3;
+}
+.panel-1 img {
+  height: 100px;
+}
+.oculta-panel .panel-footer{
+  color: #DCD9D9;
+  cursor: not-allowed;
+}
+.oculta-panel .panel-body {
+  cursor: not-allowed;
+}
+.oculta-panel img {
+  opacity: 0.1;
+}
+#rfcApoderado {
+  text-transform: uppercase;
+}
+
+
+/* Flip style */
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 99%;
+  height: 99%;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+.sidebar{
+  background: #f5f5f5;
+  border: none;
+  width: 100%;
+  min-height: 400px;
+}
+.sidebar .panel-heading{
+  padding:0px 15px 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-size: 25px;
+  font-weight: 100;
+}
+.sidebar .profile-picture{
+  background: #fff;
+  border:1px solid #cdcdcd;
+  height: 140px;
+  width: 140px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius:100px;
+}
+.name-pyme{
+  font-size: 28px;
+  font-weight: 300;
+}
+.clearfix{
+  clear: both;
+}
+.menu-finanzas li{
+  float: left;
+  margin-left:20px;
+}
+.menu-finanzas li a{
+  color: #4a4a4a;
+  font-size: 14px;
+}
+.menu-finanzas li i{
+  margin-right: 5px;
+}
+.title-banner{
+  font-size: 40px;
+  margin: 15px 15px 15px 0px ;
+}
+.tex .title-banner{
+  margin: 0px 15px 15px 0px ;
+}

@@ -1,0 +1,193 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<br><br><br>
+<div class="container">
+    <div>
+        <h1>Simulador de créditos</h1>
+        <p>Estas son sus facturas pendientes pendientes de pago. Por favor, seleccione aquellos para los que desea simular crédito y visualice su ingreso de efectivo como resultado de este crédito.
+<br>
+          <small>Nota: se trata de una simulación. Mientras hacemos todo lo posible para proporcionarle una respuesta basada en datos, el resultado final dependerá del crédito otorgado por la institución financiera.</small>
+        </p>
+        <br>
+<table id="example" class="display" width="100%" data-page-length="25" data-order="[[ 1, &quot;asc&quot; ]]">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Multinacional</th>
+            <th>#Factura</th>
+            <th>Monto</th>
+            <th>Emisión</th>
+            <th>Antigüedad</th>
+            <th>Financiar</th>
+            <th>Total a financiar</th>
+            <th>Intereses</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>1</td>
+                <td>Kosmos</td>
+                <td>2332239</td>
+                <td>USD10,000.10</td>
+                <td>01/11/2016</td>
+                <td>90</td>
+                <td>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value=""></label>
+                  </div>
+                </td>
+                <td>USD7,500.08</td>
+                <td>600,00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kosmos</td>
+                <td>33</td>
+                <td>USD50,000.10</td>
+                <td>01/09/2016</td>
+                <td>120</td>
+                <td>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value=""></label>
+                  </div>
+                </td>
+                <td>USD25,000.05</td>
+                <td>820,00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kosmos</td>
+                <td>13322</td>
+                <td>USD100.00</td>
+                <td>01/08/2016</td>
+                <td>150</td>
+                <td>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value=""></label>
+                  </div>
+                </td>
+                <td></td>
+                <td>677,00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Modelo</td>
+                <td>93484443</td>
+                <td>USD10,000.19</td>
+                <td>01/08/2016</td>
+                <td>1050</td>
+                <td>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value=""></label>
+                  </div>
+                </td>
+                <td></td>
+                <td>880,00</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Modelo</td>
+                <td>2334234</td>
+                <td>USD10,000.19</td>
+                <td>01/08/2016</td>
+                <td>2</td>
+                <td>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="" id="check"></label>
+                  </div>
+                </td>
+                <td></td>
+                <td>750,00</td>
+            </tr>
+    </tbody>
+</table>
+<br><br>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <button id="btn-simular" class="btn btn-primary btn-block">Acceder al crédito</button>
+  </div>
+</div>
+<br>
+          <div id="graph2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+        </div>
+    </div>
+
+<script>
+  $(document).ready(function() {
+    $('#example').dataTable();
+  });
+
+
+  $(function () {
+    Highcharts.chart('graph2', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: 'Estimado de flujo de capital'
+      },
+      subtitle: {
+        text: ''
+      },
+      xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yAxis: {
+        title: {
+          text: 'Dinero'
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      },
+      series: [{
+        name: 'Flujo estimado',
+        data: [100000, 120000, 125000.5, 126000.5, 127000.4, 125000.5, 122000.2, 116000.5, 100000.3, 75000.3, 70000.9, 60000.6]
+      }, {
+        name: 'Flujo real',
+        data: [80000,  90000,   104000.7, 110000,   112000.9, 110000.2, 108000.5, 106000.6, 103000.2, 97000.3, 94000.6, 92000.8]
+      }]
+    });
+  });
+</script>
+
+<script>
+  var countChecked = function () {
+    var n = $("input:checked").length;
+    if (n >= 1) {
+      $("#btn-simular").css({
+        "visibility": "visible"
+      });
+    } else {
+      $("#btn-simular").css({
+        "visibility": "hidden"
+      });
+    }
+  };
+  countChecked();
+
+  $("input[type=checkbox]").on("click", countChecked);
+</script>
+<script>
+  $('#check').change(function() {
+
+    var $check = $(this),
+      $div = $check.parent();
+
+    if ($check.prop('checked')) {
+
+      $div.addClass('test');
+
+    } else {
+
+      $div.removeClass('test');
+
+    }
+
+  });
+</script>
