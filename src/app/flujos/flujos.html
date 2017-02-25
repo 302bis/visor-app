@@ -1,0 +1,157 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="menu-fix"></div>
+<div class="container">
+    <h1>Flujos de caja
+        <i type="button" class="icono fa fa-question-circle" data-toggle="popover" data-content="El flujo de caja se refiere a las entradas y salidas de caja o efectivo, en un período dado. Es la acumulación neta de activos líquidos y, por lo tanto, es un indicador importante de la liquidez de una empresa."></i>
+    </h1>
+    <p>Para conocer como fue el flujo de caja de tu empresa durante un mes en particular, haz clic en <b>seleccionar período</b> y luego en <b>Calcular</b>  </p>
+
+    <div class="well">
+            <div class="col-md-4 col-md-offset-3">
+                <select class="form-control">
+                    <option>Seleccionar período</option>
+                    <option>Enero</option>
+                    <option>Febrero</option>
+                    <option>Marzo</option>
+                    <option>Abril</option>
+                    <option>Mayo</option>
+                    <option>Junio</option>
+                    <option>Julio</option>
+                    <option>Agosto</option>
+                    <option>Septiembre</option>
+                    <option>Octubre</option>
+                    <option>Noviembre</option>
+                    <option>Diciembre</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-block" data-toggle="collapse" data-target="#ayuda" aria-expanded="false" aria-controls="ayuda">
+                    Calcular
+                </button>
+            </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+    <div class="collapse" id="ayuda">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel operativo panel-default">
+                    <div class="panel-heading text-center">
+                        <h2>Operativo</h2>
+                        <h1>
+
+                            <div>$94,019.70</div>
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel libre panel-default" style="display:none">
+                    <div class="panel-heading text-center">
+                        <h2>Libre</h2>
+                        <h1>
+
+                            <div>$67,406.00</div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel neto panel-success" style="display:none;">
+                    <div class="panel-heading text-center" style="color: white">
+                        <h2 style="color: white">Neto</h2>
+                        <h1 style="color: white">
+
+                            <div>$39,717.00</div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div id="barra" style="height: 200px"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover({
+            placement : 'right',
+            trigger : 'hover'
+        });
+    });
+</script>
+
+<script>
+    $('.operativo').addClass('animated fadeInUp');
+
+    setTimeout(function () {
+        $('.libre').show().addClass('animated fadeInUp');}, 1000
+    );
+    setTimeout(function () {
+        $('.neto').show().addClass('animated fadeInUp');}, 1500
+    );
+</script>
+<script>
+
+    Highcharts.chart('barra', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: null
+        },
+        xAxis: {
+            categories: [''],
+            enabled: false
+        },
+        yAxis: {
+            min: 0,
+            labels: {
+                formatter: function () {
+                    return Highcharts.numberFormat(this.value, 0, '', ''); // Remove the thousands sep?
+                },
+
+            },
+            title: {
+                text: null
+            },
+
+        },
+        legend: {
+            reversed: true
+        },
+        tooltip: { enabled: false },
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: '#666',
+                    style: {fontWeight: 'bolder'},
+                    formatter: function() {return this.x + '$ ' + this.y + ''},
+                    pointFormat: "Value: {point.y:.2f} mm",
+                    inside: true
+                }
+            },
+
+        },
+        series: [{
+            name: 'neto',
+            color: '#33B9A5',
+            data: [39717.88]
+        },{
+            name: 'Libre',
+            color: '#f5f5f5',
+            data: [67406.12]
+        }]
+    });
+</script>
+

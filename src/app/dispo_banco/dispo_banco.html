@@ -1,0 +1,323 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="menu-fix"></div>
+
+<div class="container">
+  <h1>MERM7606064S9, <small>Maribel Inc - Maribel</small></h1>
+  <hr>
+    <!--Alerta de horario-->
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
+                <div class="alert alert-warning alert-dismissible fade in" role="alert">
+
+                    <div class="row">
+                        <div class="col-md-1"><i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i></div>
+                        <div class="col-md-10"><b>¡Alerta!</b> Horario de servicio para desembolso es de <b>08:00</b> a <b>16:00</b></div>
+                        <div class="col-md-1">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Ver Historial</a></li>
+    <li><a href="#">Ver documentos Campaña</a></li>
+    <li><a href="#">Documentos Adicionales</a></li>
+    <li><a href="#">Administrador de Proceso</a></li>
+    <li><a href="#">Expediente Operativo</a></li>
+    <li><a href="#">Obtener/Actualizar Curriculum</a></li>
+  </ul>
+    <br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-body text-center">
+          <h3>
+            Límite autorizado<br>
+                    <div>$1,000,070.70</div>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-body text-center">
+          <h3>
+              Limite disponible <br>
+                    <div>$860,000.00</div>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-body text-center">
+          <h3>
+              Cuenta Clabe STP<br>
+                <div id="resultado">646180121100400006</div>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="clearfix"></div>
+
+    <h2>Listas de facturas</h2>
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+        Facturas / Órdenes de compra disponibles
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th class="text-center">Tipo</th>
+          <th class="text-center">Nº Referencia</th>
+          <th class="text-center">Fecha Emisión</th>
+          <th class="text-center">Fecha Vencimiento</th>
+          <th class="text-center">Valor Factura/Orden</th>
+          <th class="text-center">Documento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="text-center">Factura</td>
+          <td class="text-center">Folio002</td>
+          <td class="text-center">2016-07-20</td>
+          <td class="text-center"></td>
+          <td class="text-center">$101.00</td>
+          <td class="text-center">$70.70</td>
+          <td class="text-center">
+              <button type="button" class="btn btn-success">Descargar</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">Factura</td>
+          <td class="text-center">Folio003</td>
+          <td class="text-center">2016-07-21</td>
+          <td class="text-center"></td>
+          <td class="text-center">$102.00</td>
+          <td class="text-center">$71.40</td>
+            <td class="text-center">
+            <button type="button" class="btn btn-success">Descargar</button>
+        </td>
+
+        </tr>
+        <tr>
+          <td class="text-center">Factura</td>
+          <td class="text-center">Folio005</td>
+          <td class="text-center">2016-08-24</td>
+          <td class="text-center"></td>
+          <td class="text-center">$100.00</td>
+          <td class="text-center">$70.00</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-success">Descargar</button>
+            </td>
+        </tr>
+        <tr>
+          <td class="text-center">Factura</td>
+          <td class="text-center">Folio006</td>
+          <td class="text-center">2016-08-25</td>
+          <td class="text-center"></td>
+          <td class="text-center">$101.00</td>
+          <td class="text-center">$70.70</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-success">Descargar</button>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        Facturas en proceso de financiamiento
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="text-center">Tipo</th>
+                <th class="text-center">Nº Referencia</th>
+                <th class="text-center">Fecha Emisión</th>
+                <th class="text-center">Valor Factura/Orden</th>
+                <th class="text-center">Monto a Financiar</th>
+                <th class="text-center">Fecha disposición</th>
+                <th class="text-center">Documento</th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-center">Factura</td>
+                <td class="text-center">FR1</td>
+                <td class="text-center"></td>
+                <td class="text-center">$142.86</td>
+                <td class="text-center">$100.00</td>
+                <td class="text-center">25/11/2015</td>
+                <th class="text-center"><i class="fa fa-eye fa-2x"></i> </th>
+                <th class="text-center">
+                    <button type="button" class="btn btn-success">Aprobar</button>
+                </th>
+                <th class="text-center">
+                    <button type="button" class="btn btn-danger">Rechazar</button>
+                </th>
+            </tr>
+            <tr>
+                <td class="text-center">Factura</td>
+                <td class="text-center">Folio001</td>
+                <td class="text-center"></td>
+                <td class="text-center">$100.00</td>
+                <td class="text-center">$70.00</td>
+                <td class="text-center">2500302016</td>
+                <th class="text-center"> <i class="fa fa-eye  fa-2x"></i></th>
+                <th class="text-center">
+                    <button type="button" class="btn btn-success">Aprobar</button>
+                </th>
+                <th class="text-center">
+                    <button type="button" class="btn btn-danger">Rechazar</button>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+        <div class="pull-right">
+            <h2>Monto total a financiado 280,000</h2>
+        </div>
+    </div>
+</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Facturas Financiadas
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th class="text-center">Tipo</th>
+                    <th class="text-center">Nº Referencia</th>
+                    <th class="text-center">Fecha Emisión</th>
+                    <th class="text-center">Valor Factura/Orden</th>
+                    <th class="text-center">Monto a Financiar</th>
+                    <th class="text-center">Fecha Financiamiento</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center">Factura</td>
+                    <td class="text-center">FR1</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">$142.86</td>
+                    <td class="text-center">$100.00</td>
+                    <td class="text-center">25/11/2015</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-success">Liquidar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">Factura</td>
+                    <td class="text-center">Folio001</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">$100.00</td>
+                    <td class="text-center">$70.00</td>
+                    <td class="text-center">2500302016</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-success">Liquidar</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="pull-right">
+                <h2>Monto total a financiado 280,000</h2>
+            </div>
+        </div>
+    </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Facturas Financiadas Pagadas
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th class="text-center">Tipo</th>
+          <th class="text-center">Nº Referencia</th>
+          <th class="text-center">Fecha Emisión</th>
+          <th class="text-center">Valor Factura/Orden</th>
+          <th class="text-center">Monto a Financiar</th>
+          <th class="text-center">Fecha Pago</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div class="pull-right">
+        <h2>Monto total pagado 0</h2>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      Facturas No Financiadas
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th class="text-center">Tipo</th>
+          <th class="text-center">Nº Referencia</th>
+          <th class="text-center">Fecha Emisión</th>
+          <th class="text-center">Valor Factura/Orden</th>
+          <th class="text-center">Razón</th>
+          <th class="text-center">Fecha Rechazo</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="text-center">Factura</td>
+          <td class="text-center">Folio007</td>
+          <td class="text-center">2500502016</td>
+          <td class="text-center">$102.00</td>
+          <td class="text-center">"VENCIDA"</td>
+          <td class="text-center"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div>
+<script>
+  function scrollNav() {
+    $('.btn-nav a').click(function(){
+      //Toggle Class
+      $(".active").removeClass("active");
+      $(this).closest('li').addClass("active");
+      var theClass = $(this).attr("class");
+      $('.'+theClass).parent('li').addClass('active');
+      //Animate
+      $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 160
+      }, 400);
+      return false;
+    });
+    $('.scrollTop a').scrollTop();
+  }
+  scrollNav();
+
+</script>
