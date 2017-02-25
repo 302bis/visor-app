@@ -1,8 +1,28 @@
 <div ng-include="'app/components/menu/menu.html'"></div>
-<br><br><br>
+<div class="menu-fix"></div>
 
 <div class="container">
   <h2>Proceso de desembolso</h2>
+  <!--Alerta de horario-->
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
+        <div class="alert alert-warning alert-dismissible fade in" role="alert">
+
+          <div class="row">
+            <div class="col-md-1"><i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i></div>
+            <div class="col-md-10"><b>¡Alerta!</b> Horario de servicio para desembolso es de <b>08:00</b> a <b>16:00</b></div>
+            <div class="col-md-1">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-xs-12 col-sm-4">
       <div class="panel panel-default">
@@ -131,13 +151,18 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
         <div class="alert alert-warning alert-dismissible fade in" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-          <i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i>
-          ¡Alerta! Puedes solicitar hasta un máximo del 70% de la factura.
+
+          <div class="row">
+            <div class="col-md-1"><i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i></div>
+            <div class="col-md-10"><b>¡Alerta!</b> Puedes solicitar hasta un máximo del 70% de la factura.</div>
+            <div class="col-md-1">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
   <div class="row">

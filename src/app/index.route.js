@@ -68,6 +68,16 @@
         url: '/dispo',
         templateUrl: 'app/dispo/dispo.html'
       });
+    $stateProvider
+      .state('dispo_banco', {
+          url: '/dispo_banco',
+          templateUrl: 'app/dispo_banco/dispo_banco.html'
+      });
+    $stateProvider
+      .state('flujos', {
+          url: '/flujos',
+          templateUrl: 'app/flujos/flujos.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {

@@ -1,0 +1,9 @@
+.countdown_first:before, .countdown_fourth:before,
+.countdown_nine:before{
+  content:'$';
+}
+.countdown_second:after, .countdown_third:after,
+.countdown_five:after, .countdown_six:after,
+.countdown_seven:after, .countdown_eight:after{
+  content:'%';
+}
