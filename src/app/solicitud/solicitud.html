@@ -1,0 +1,87 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="menu-fix"></div>
+
+<div class="container">
+  <h1>Gran pyme SAPI DE CV <small>- KOSMVE4MFLUX022</small></h1>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-justified  text-center" id="nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="/perfil_form/#dustin" aria-controls="dustin" role="tab" data-toggle="tab">
+                        <div class="img"><i class="fa fa-industry  fa-5x" aria-hidden="true"></i></div>
+                        <span class="quote"><i class="fa fa-check" aria-hidden="true"></i></span>
+                    </a>
+                    <span>Perfil de empresa</span>
+                </li>
+                <li role="presentation">
+                    <a href="/perfil_form/#daksh" aria-controls="daksh" role="tab" data-toggle="tab">
+                        <div class="img"><i class="fa fa-file-text-o  fa-5x" aria-hidden="true"></i></div>
+                        <span class="quote red"><i class="fa fa-exclamation"></i></span>
+                    </a>
+                    <span>Documentos</span>
+                </li>
+                <li role="presentation">
+                    <a href="/perfil_form/#anna" aria-controls="anna" role="tab" data-toggle="tab">
+                        <div class="img"><i class="fa fa-check-square  fa-5x" aria-hidden="true"></i></div>
+                        <span class="quote"><i class="fa fa-hand-paper-o"></i></span>
+                    </a>
+                    <span>Correcciones</span>
+                </li>
+                <li role="presentation">
+                    <a href="/perfil_form/#anna" aria-controls="anna" role="tab" data-toggle="tab">
+                        <div class="img"><i class="fa fa-check  fa-5x" aria-hidden="true"></i></div>
+                        <span class="quote"><i class="fa fa-hand-paper-o"></i></span>
+                    </a>
+                    <span>Aprobación</span>
+                </li>
+                <li role="presentation">
+                    <a href="/perfil_form/#anna" aria-controls="anna" role="tab" data-toggle="tab">
+                        <div class="img"><i class="fa fa-cube fa-5x" aria-hidden="true"></i></div>
+                        <span class="quote"><i class="fa fa-hand-paper-o"></i></span>
+                    </a>
+                    <span>Formalización</span>
+                </li>
+                <li role="presentation">
+                    <a href="/perfil_form/#wafer" aria-controls="wafer" role="tab" data-toggle="tab">
+                        <div class="img txt">11 </div>
+                        <span class="quote"><i class="fa fa-hand-paper-o"></i></span>
+                    </a>
+                    <span>Días restantes</span>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content" id="tabs-collapse">
+                <div role="tabpanel" class="tab-pane fade in active" id="dustin">
+                    <div class="tab-inner">
+                        <p class="lead text-center">Llena todos los campos con los datos del representante legal y los de tu empresa</p>
+                        <br>
+                        <div ng-include="'app/solicitud/perfil.html'"></div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="daksh">
+                    <div class="tab-inner">
+                        <p class="lead">Para poder continuar con la solicitud del crédito, tienes que pedir los formularios solicitados por el banco</p>
+                        <br>
+                        <div ng-include="'app/solicitud/upload.html'"></div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="anna">
+                    <div class="tab-inner">
+                        <p class="lead">Nullam suscipit ante ac arcu placerat, nec sagittis quam volutpat. Vestibulum aliquam facilisis velit ut ultrices.</p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="wafer">
+                    <div class="tab-inner">
+                        <p class="lead"> Fusce erat libero, fermentum quis sollicitudin id, venenatis nec felis. Morbi sollicitudin gravida finibus.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

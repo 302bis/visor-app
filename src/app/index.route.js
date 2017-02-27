@@ -78,6 +78,16 @@
           url: '/flujos',
           templateUrl: 'app/flujos/flujos.html'
       });
+    $stateProvider
+      .state('perfil_form', {
+          url: '/perfil_form',
+          templateUrl: 'app/perfil_form/perfil_form.html'
+      });
+    $stateProvider
+      .state('solicitud', {
+          url: '/solicitud',
+          templateUrl: 'app/solicitud/solicitud.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {
