@@ -1,0 +1,22 @@
+.thumbs{
+  font-size: 33px !important;
+  line-height: 33px;
+}
+.thumbs.up {
+  color: #999999;
+  margin-right: 20px;
+}
+.thumbs.up:hover{
+  color: green;
+
+}
+.thumbs.down{
+  color:#999999;
+}
+.thumbs.down:hover{
+  color:red;
+}
+
+.reject-text{
+  width: 100% !important;
+}

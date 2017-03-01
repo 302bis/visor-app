@@ -1,340 +1,37 @@
 <div ng-include="'app/components/menu/menu.html'"></div>
 <div class="menu-fix"></div>
 <!-- Piso informacion de perfil -->
-<div class="panel panel-default sidebar">
-  <div class="panel-body">
-    <div class="profile-picture">
-      P
-    </div>
-    <br>
-    <div class="panel-heading text-center">Bienvenido</div>
-
-    <p class="text-center name-pyme">Papelería la Victoria S.A. de C.V<br></p>
-    <p class="text-center">PMH130628UI1</p>
-
-    <div class="text-center">Campaña:</div>
-
-    <p class="text-center"><b>American Express</b></p>
-  </div>
-</div>
+<div ng-include="'app/components/sidebar/sidebar.html'"></div>
 <!-- Fin informacion perfil -->
-
-<div class="container-middle">
-          <div class="row">
-            <!-- Piso 1 -->
-            <div class="col-md-3">
-              <div class="flip-container">
-                <div class="flipper" data-toggle="modal" data-target="#myModal" ontouchstart="this.classList.toggle('hover');">
-                  <div class="front">
-                    <div class="panel panel-default ">
-                      <div class="panel-body panel-1">
-                        <center>
-                          <img src="assets/images/img_visor/sat-ciec.svg" class="img-responsive" alt="Datos">														</center>
-                      </div>
-                      <div class="panel-footer panel-body-visor">Agrega tu CIEC</div>
-                    </div>
-                  </div>
-                  <div class="back">
-                    <div class="panel panel-default">
-                      <div class="panel-body panel-1 text-center">
-                        <br>
-                        <div class="panel-heading text-center">Agrega tu clave CIEC</div>
-
-                        <br>
-                        <br>
-                        <div class="btn btn-primary btn-block">Click aqui</div>														<br>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="panel panel-default">
-                <div class="title-banner ">Bienvenido</div>
-                <div class="panel-body">
-                  Para poder acceder a los beneficios de Visor, necesitas agregar tu clave CIEC									  </div>
-                <div class="col-md-3 piso-1-click">
-                  <img src="assets/images/img_visor/back.svg" class="img-responsive flecha-home" alt="Datos">
-                </div>
-                <div class="col-md-9 tex piso-1-click">
-                  <div>Click aquí</div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/account-states.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Agregar estados de cuenta</div>
-              </div>
-            </div>
-            <div class="col-sm-12 hidden">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/account-states.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Uno</div>
-              </div>
-            </div>
-            <div class="col-sm-12 hidden">
-              <div class="panel panel-default text-center">
-                <div class="panel-body">
-                  <h2>Te faltan 5 requisitos para obtener tu crédito</h2>
-                </div>
-                <div class="panel-footer text-center">Dos</div>
-              </div>
-            </div>
-            <!-- Fin piso 1 -->
-
-            <!-- Piso 2 -->
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/tools.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Herramientas de Usuario</div>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="panel panel-default piso-2-solicitud">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/my-application.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Mi solicitud <!--Mis Solicitudes--></div>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel piso-2-mis-finanzas" data-toggle="collapse" data-target="#misFinanzas-collapse">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/home-money.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Mis finanzas</div>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel piso-2-simulador">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/masks.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Simulador de crédito</div>
-              </div>
-            </div>
-
-            <!-- Fin piso 2 -->
-
-            <!-- Bloque oculto mis finanzas -->
-            <div class="col-sm-12 collapse modal-misFinanzas">
-              <div class="panel panel-default">
-                <div class="panel-body sub-menu">
-                  <ul class="menu-finanzas">
-                    <li><a href="contabilidad.php"><i class="icon-file-add"></i>Visor Analíticos de Facturas</a>
-                    </li>
-                    <li><a href="listo_declaraciones.php"><i class="icon-file-add"></i>Visor Declaraciones</a>
-                    </li>
-                    <li><a href="listo_impuestos.php"><i class="icon-file-add"></i>Visor Impuestos</a>
-                    </li>
-                    <li><a href="listo_saldos.php"><i class="icon-file-add"></i>Visor Saldos</a>
-                    </li>
-                    <li><a href="paybook.php"><i class="icon-dollar"></i>Visor Flujos de Caja</a>
-                    </li></ul>
-                </div>
-              </div>
-            </div>
-            <!-- FIn mis finanzas -->
-
-
-            <!-- Piso 3 -->
-            <div class="col-sm-9">
-              <div class="panel panel-default comunidad-visor">
-                <div class="panel-body">
-                </div>
-                <div class="panel-footer panel-footer-comunidad">Unete a la comunidad de <br> emprendedores de VISOR</div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="panel panel-default">
-                <div class="panel-body arbol-visor">
-                  Centros de recursos para pymes
-                </div>
-              </div>
-            </div>
-            <!-- Fin piso 3 -->
-            <!-- Piso AD -->
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body special">
-
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body special">
-
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body special">
-
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body special">
-
-                </div>
-              </div>
-            </div>
-
-            <!-- Fin piso AD -->
-            <!-- Piso 4 -->
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel piso-4-proyeccion">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/presentation.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Proyección de ventas</div>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="panel panel-default oculta-panel">
-                <div class="panel-body">
-                  <center>
-                    <img src="assets/images/img_visor/newspaper.svg" class="img-responsive" alt="Datos">
-                  </center>
-                </div>
-                <div class="panel-footer text-center">Noticias financieras</div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="panel panel-default piso-4-ayuda">
-                <div class="panel-body panel-ayuda">
-                  <center>
-                    <img src="assets/images/img_visor/question-mark.svg" class="img-responsive" alt="Datos">
-                    <h3>Centro de ayuda</h3>
-                  </center>
-                </div>
-              </div>
-            </div>
-            <!-- Fin piso 4 -->
-
-          </div>
-
-
+<div class="container-middle home">
+   <div class="row">
+      <!-- Piso 1 -->
+      <div ng-include="'app/home/primer-piso.html'"></div>
+      <!-- Fin piso 1 -->
+      <div ng-include="'app/home/banner.html'"></div>
+      <!-- Piso 2 -->
+      <div ng-include="'app/home/segundo-piso.html'"></div>
+      <!-- Fin piso 2 -->
+      <!-- Piso 3 -->
+      <div ng-include="'app/home/tercer-piso.html'"></div>
+      <!-- Fin piso 3 -->
+      <!-- Piso AD -->
+      <div ng-include="'app/home/piso-ad.html'"></div>
+      <!-- Fin piso AD -->
+      <!-- Piso 4 -->
+      <div ng-include="'app/home/cuarto-piso.html'"></div>
+      <!-- Fin piso 4 -->
+   </div>
 </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <div class="big-icon">
-                        <img src="assets/images/img_visor/sat-ciec.svg" class="img-responsive" alt="Datos">
-                    </div>
-
-
-                    <form id="ciecHomePyme">
-                        <div class="col-md-6 col-md-offset-1">
-                            <div class = "input-group">
-                                <input placeholder="Ingresa aquí tu CIEC" id="password_show" type="password" class="form-control">
-                                <span id="password_show_button" class="input-group-addon"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-success btn-block">Verificar CIEC</button>
-                        </div>
-
-                    </form>
-                    <br>
-                    <br><br>
-                    <div class="form-group">
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#datos-visor" aria-expanded="true" aria-controls="datos-visor">
-                            Visor accederá a la siguiente información
-                        </button>
-                        <div class="collapse" id="datos-visor">
-                            <table class="table table-striped table-hover">
-                                <thead>
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th><span class="icon-file-text"></span></th>
-                                    <th>Facturación emiitda y recibida</th>
-                                    <th><span class="icon-exclamation-sign"></span></th>
-                                </tr>
-                                <tr>
-                                    <th><span class="icon-file-text"></span></th>
-                                    <th>Declaración mensajes de ISR e IVA</th>
-                                    <th><span class="icon-exclamation-sign"></span></th>
-                                </tr>
-                                <tr>
-                                    <th><span class="icon-file-text"></span></th>
-                                    <th>Declaración anual de ISR e IVA</th>
-                                    <th><span class="icon-exclamation-sign"></span></th>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-
-                    <p class="text-justify">
-                        Haciendo click en ‘Ingresar CIEC’, estás permitiendo que VisorADL use
-                        la información arriba detallada de acuerdo a los <span class="ayuda-ciec">
-                        términos de servicio</span> y <span class="ayuda-ciec">politicas de privacidad.</span>
-                        Puedes desactivar esta  copartición, haciendo click en el apartado
-                        <span class="ayuda-ciec">Clave CIEC</span> en la página de configuración.
-                        Los datos que nos proporcionan están protegidos por la ley federal de protección de datos.
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
+<!-- Modal -->
+<div ng-include="'app/home/modal.html'"></div>
 <script>
-    $(document).ready(function(){
-        $("#password_show_button").mouseup(function(){
-            $("#password_show").attr("type", "password");
-        });
-        $("#password_show_button").mousedown(function(){
-            $("#password_show").attr("type", "text");
-        });
-    });
+   $(document).ready(function(){
+       $("#password_show_button").mouseup(function(){
+           $("#password_show").attr("type", "password");
+       });
+       $("#password_show_button").mousedown(function(){
+           $("#password_show").attr("type", "text");
+       });
+   });
 </script>
