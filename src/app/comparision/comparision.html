@@ -1,0 +1,201 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="menu-fix"></div>
+
+<div class="container">
+  <h1>Proceso de revisión de documentos</h1>
+    <p>En esta página, podrás aprobar o desaprobar los documentos subidos por la pyme. Una vez seleccionado uno, podrás visualizarlo y dictaminar si cumple con las características necesarias.</p>
+
+
+    <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="/comparision/#revdoc" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-exclamation" aria-hidden="true"></i> Revisión de documentos</a></li>
+            <li role="presentation"><a href="/comparision/#docok" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-check" aria-hidden="true"></i> Documentos aprobados</a></li>
+            <li role="presentation"><a href="/comparision/#docbad" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-times" aria-hidden="true"></i> Documentos desaprobados</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="revdoc">
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <select name="" class="form-control" data-style="btn-primary" data-live-search="true">
+                                        <option value="">Selecciona un documento</option>
+                                        <option value="">Nombre de documento numero uno</option>
+                                        <option value="">Nombre de documento numero dos</option>
+                                        <option value="">Nombre de documento numero tres</option>
+                                        <option value="">Nombre de documento numero cuatro</option>
+                                        <option value="">Nombre de documento numero cinco</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+            <span class="thumbs up">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            </span>
+
+                                    <span class="thumbs down">
+                <i class="fa fa-thumbs-down" aria-hidden="true" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
+            </span>
+
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+                            <div class="col-md-12">
+                                <div class="collapse" id="collapseExample">
+                                    <div class="form-group">
+                                        <textarea class="form-control reject-text" placeholder="¿Por qué ha sido rechazado este documento?"></textarea>
+                                    </div>
+                                    <button class="btn btn-success">Guardar</button>
+                                    <br>
+                                    <br>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12">
+                                <hr>
+                                <div class="form-group">
+                                    <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Revisar documento </button>
+                                </div></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <iframe src="http://docs.google.com/gview?url=http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf&embedded=true" style="width:100%; height:400px;" frameborder="0"></iframe>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="docok">
+                <br>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Documento</th>
+                                        <th>Previsualizar</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Acta constitutiva</td>
+                                        <td><a href="#">Ver</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Poder notarial numero uno</td>
+                                        <td><a href="#">Ver</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Carta de confianza notariada y firmada por el consejero especial legal</td>
+                                        <td><a href="#">Ver</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <iframe src="http://docs.google.com/gview?url=http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf&embedded=true" style="width:100%; height:400px;" frameborder="0"></iframe>
+                </div>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="docbad">
+                <br>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Documento</th>
+                                        <th>Previsualizar</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Acta constitutiva</td>
+                                        <td><a href="#">Ver</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Poder notarial numero uno</td>
+                                        <td><a href="#">Ver</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Carta de confianza notariada y firmada por el consejero especial legal</td>
+                                        <td><a href="#">Ver</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <iframe src="http://docs.google.com/gview?url=http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf&embedded=true" style="width:100%; height:400px;" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

@@ -88,6 +88,11 @@
           url: '/solicitud',
           templateUrl: 'app/solicitud/solicitud.html'
       });
+    $stateProvider
+      .state('comparision', {
+          url: '/comparision',
+          templateUrl: 'app/comparision/comparision.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {
