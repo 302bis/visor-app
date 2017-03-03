@@ -3,7 +3,7 @@
 }
 .img-ejecutivo {
   /*background: silver;*/
-  background: url(images/img_visor/executive.svg) no-repeat;
+  background: url(/assets/images/img_visor/executive.svg) no-repeat;
 }
 .panel-footer-visor {
   background: #9B2038;
@@ -15,7 +15,7 @@
   text-align: center;
 }
 .right-col .panel-body.special{
-  background: url(images/img_visor/sample_04.png) no-repeat;
+  background: url(/assets/images/img_visor/sample_04.png) no-repeat;
   background-size: cover;
   min-height: 220px;
   /*opacity: 0.1;*/
@@ -42,10 +42,9 @@
   width: 90px;
   /*padding: 20px;*/
 }
-.comunidad-visor {
-  background: url(images/img_visor/mask_group.png) no-repeat;
+.card.comunidad-visor {
+  background: url(https://visor.io/customer/images/img_visor/numbers.png) no-repeat;
   background-size: cover;
-  height: 240px;
 }
 .panel-footer-comunidad {
   color: white;
@@ -53,13 +52,17 @@
   height: 90px;
   font-size: 26px;
   border:none;
+  text-align: left !important;
 }
 .arbol-visor {
-  background: url(images/img_visor/arbol.png) no-repeat;
+  background: url(/assets/images/img_visor/arbol.png) no-repeat;
   background-size: cover;
   height: 240px;
   font-weight: bold;
 
+}
+.arbol-visor h3{
+  background: rgba(254,254,254,0.7);
 }
 .ayuda-ciec {
   cursor: pointer;
@@ -167,7 +170,16 @@
   margin: 0;
 }
 
-
+.banner{
+  background: url(/assets/images/img_visor/flecha_abajo.svg) no-repeat !important;
+  background-size:contain !important;
+}
+.banner h1{
+  margin-bottom: 0;
+}
+.banner-txt{
+  padding-right: 60px;
+}
 
 
 

@@ -3,6 +3,7 @@
     height: 250px;
     background: #fdfdfd;
     position: relative;
+    
 }
 .card-primary, .card-default{
 
@@ -39,4 +40,7 @@ min-height: 40px;
 .card-default .card-footer {
     background: #cdcdcd;
     color: #fff;
+}
+.panel{
+    transition: 1s;
 }
