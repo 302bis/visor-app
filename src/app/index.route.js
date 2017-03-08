@@ -93,6 +93,11 @@
           url: '/comparision',
           templateUrl: 'app/comparision/comparision.html'
       });
+    $stateProvider
+      .state('bolas', {
+          url: '/bolas',
+          templateUrl: 'app/bolas/bolas.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {
