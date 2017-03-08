@@ -1,0 +1,115 @@
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+
+.little-ball{
+
+}
+.little-ball .fa-5x, .little-ball .img.txt{
+  font-size: 16px;
+}
+.little-ball span{
+  font-size: 10px;
+}
+//Tabs redondas
+.nav.nav-justified > li.little-ball > a { position: relative; }
+.nav.nav-justified > li.little-ball > a:hover,
+.nav.nav-justified > li.little-ball > a:focus { background-color: transparent; }
+.nav.nav-justified > li.little-ball > a > .quote {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  background-color: #13c0ba;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.nav.nav-justified > li.little-ball.active > a > .quote { opacity: 1; }
+.nav.nav-justified > li.little-ball > a > .img { box-shadow: 0 0 0 5px #13c0ba; }
+.nav.nav-justified > li.little-ball > a > .img {
+  max-width: 100%;
+  opacity: .3;
+  transform: scale(.8,.8);
+  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  height:40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 60px;
+  
+  color: #999999;
+  margin: 0 auto;
+
+}
+.nav.nav-justified > li.little-ball.active > a > .img,
+.nav.nav-justified > li.little-ball:hover > a > .img,
+.nav.nav-justified > li.little-ball:focus > a > .img {
+  opacity: 1;
+  transform: none;
+  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+
+
+.tab-pane .tab-inner { padding: 30px 0 20px; }
+
+@media (max-width: 767px), (max-width: 556px){
+.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+}
+.little-ball span{
+  display: none;
+}
+.little-ball:hover span{
+  display: block;
+  }
+}
+@media (max-width: 600px){
+.nav-justified > li {
+    display: none;
+}
+.nav-justified > li.active {
+    display:  table-cell !important;
+}
+.little-ball span{
+  display: block;
+}
+.nav.nav-justified > li.active > a > .quote { opacity: 1; }
+.nav.nav-justified > li > a > .img { box-shadow: 0 0 0 5px #13c0ba; }
+.nav.nav-justified > li > a > .img {
+  max-width: 100%;
+  opacity: .3;
+  -webkit-transform: scale(.8,.8);
+  transform: scale(.8,.8);
+  -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  height: 120px !important;
+  padding: 25px;
+  border-radius: 60px;
+  width: 120px !important;
+  color: #999999;
+  margin: 0 auto;
+
+}
+.little-ball .fa-5x, .little-ball .img.txt{
+  font-size: 66px;
+  padding-top: 15px;
+}
+.little-ball span{
+  font-size: 16px;
+}
+.nav.nav-justified > li > a > .quote {
+display: none;
+}
+
+}
