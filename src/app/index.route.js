@@ -98,6 +98,36 @@
           url: '/bolas',
           templateUrl: 'app/bolas/bolas.html'
       });
+    $stateProvider
+      .state('convenyor-config', {
+          url: '/convenyor-config',
+          templateUrl: 'app/convenyor/convenyor-config.html'
+      });
+    $stateProvider
+      .state('mnc-1', {
+          url: '/mnc-1',
+          templateUrl: 'app/convenyor/mnc-1.html'
+      });
+    $stateProvider
+      .state('mnc-2', {
+          url: '/mnc-2',
+          templateUrl: 'app/convenyor/mnc-2.html'
+      });
+    $stateProvider
+      .state('mnc-3', {
+          url: '/mnc-3',
+          templateUrl: 'app/convenyor/mnc-3.html'
+      });
+    $stateProvider
+      .state('mnc-4', {
+          url: '/mnc-4',
+          templateUrl: 'app/convenyor/mnc-4.html'
+      });
+    $stateProvider
+      .state('login', {
+          url: '/login',
+          templateUrl: 'app/login/login.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {

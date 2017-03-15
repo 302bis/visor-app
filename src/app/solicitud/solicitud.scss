@@ -94,3 +94,26 @@
    margin-top: 0 !important;
   height:70px;
 }
+
+/*-------------Paso Revisión--------------*/
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+ }
+.btn-correction{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+/*-------------Overlay--------------*/
+.overlay{
+  background: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}

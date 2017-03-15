@@ -25,7 +25,7 @@
   min-height: 50px;
 }
 
-.panel-footer {
+.home .panel-footer {
   height: 70px;
   font-size: 18px;
 }
@@ -55,7 +55,7 @@
   text-align: left !important;
 }
 .arbol-visor {
-  background: url(/assets/images/img_visor/arbol.png) no-repeat;
+  background: url(https://dev.visor.io/customer/images/img_visor/arbol.png) no-repeat;
   background-size: cover;
   height: 240px;
   font-weight: bold;
@@ -171,7 +171,7 @@
 }
 
 .banner{
-  background: url(/assets/images/img_visor/flecha_abajo.svg) no-repeat !important;
+  background: url(https://dev.visor.io/customer/images/img_visor/flecha_abajo.svg) no-repeat !important;
   background-size:contain !important;
 }
 .banner h1{
