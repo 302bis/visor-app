@@ -128,6 +128,11 @@
           url: '/login',
           templateUrl: 'app/login/login.html'
       });
+    $stateProvider
+      .state('home-banco', {
+          url: '/home-banco',
+          templateUrl: 'app/home-banco/home-banco.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {

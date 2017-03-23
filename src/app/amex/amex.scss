@@ -3,7 +3,7 @@ section {
   float: left;
 }
 
-.banner-section {
+.amex .banner-section {
   background: url("https://visor.io/images/landing/emprendedor.jpg") no-repeat;
   background-size: 100%;
   background-color: #002663;
@@ -14,11 +14,11 @@ section {
   position: absolute;
 }
 
-.post-title-block {
+.amex .post-title-block {
   padding: 40px 0;
 }
 
-.post-title-block h1 {
+.amex .post-title-block h1 {
   color: #ffffff;
   font-size: 55px;
   font-weight: bold;
@@ -29,18 +29,18 @@ section {
   text-shadow: 0 0 10px #333;
 }
 
-.post-title-block li {
+.amex .post-title-block li {
   font-size: 20px;
   color: #ffffff;
 }
 
-.image-block {
+.amex .image-block {
   float: left;
   width: 100%;
   margin-bottom: 10px;
 }
 
-.footer-link {
+.amex .footer-link {
   float: left;
   width: 100%;
   background: #222222;
@@ -48,7 +48,7 @@ section {
   padding: 30px;
 }
 
-.footer-link a {
+.amex .footer-link a {
   color: #A9FD00;
   font-size: 18px;
   text-transform: uppercase;
@@ -94,19 +94,19 @@ section {
     padding-top: 6px;
     width: 70px;
   }
-  .post-title-block {
+  .amex .post-title-block {
     padding: 0;
   }
-  .post-title-block h1{
+  .amex .post-title-block h1{
     margin-top:0;
     font-size: 36px;
   }
-  .banner-section{
+  .amex .banner-section{
     background-color: transparent;
   }
 }
 @media only screen and (max-width : 480px) {
-  .post-title-block h1{
+  .amex .post-title-block h1{
     width: 100%;
   }
 }
@@ -117,7 +117,7 @@ section {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-  .post-title-block h1{
+  .amex .post-title-block h1{
     font-size: 55px;
   }
 }
