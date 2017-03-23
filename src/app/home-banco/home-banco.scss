@@ -1,0 +1,96 @@
+.home-banco .profile-picture{
+overflow: hidden;
+}
+.home-banco .profile-picture img{
+  width: 100%;
+  padding: 0 4px 0;
+  margin-top: -10px;
+}
+.select-camp{
+  margin: 25px 0 0 0;
+}
+.tabla-div{
+  width: 100%;
+}
+
+
+.tabla.row{
+  width: 100%;
+}
+.tabla-head{
+  line-height: 40px;  
+  border-bottom: 2px solid #333;
+}
+.tabla-linea div{
+  display: block;
+  padding: 15px 0 15px 0;
+}
+.tabla-linea div:last-child{
+  display: block;
+  padding: 5px 0 0 0;
+}
+.tabla-linea, .tabla-head{
+  padding-left: 5px;
+}
+.tabla-linea:nth-child(odd){
+background:#fff;
+}
+.tabla-linea:nth-child(even){
+background:#fafafa;
+}
+
+.col-20{
+  float: left;
+  width: 20%;
+}
+.col-10{
+  float: left;
+  width: 10%;
+}
+.col-5{
+  float: left;
+  width: 5%;
+}
+.col-15{
+  float: left;
+  width: 15%;
+}
+.col-25{
+  float: left;
+  width: 25%;
+}
+
+.home-banco aside{
+float:left;
+width: 18%;
+margin: 0 2% 0 0;
+}
+.home-banco aside .sidebar{
+float:left;
+width: 100% !important;
+margin: 0;
+}
+.home-banco-content{
+  float: left;
+  width: 80%;
+}
+
+@media (max-width: 992px){
+  .sidebar .panel-body{
+    padding:5px;
+  }
+  .sidebar p{
+    font-size: 12px !important;
+  }
+  .tabla-div{
+    font-size: 11px;
+  }
+  .tabla-div button{
+    font-size: 8px;
+  }
+}
+@media (max-width: 767px){
+  .home-banco-content{
+    width: 100%;
+  }
+}
