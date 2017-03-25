@@ -1,0 +1,154 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="menu-fix"></div>
+
+<div class="container">
+  <h1>Proceso de desembolso</h1>
+  <div class="panel panel-primary text-center">
+    <div class="panel-body">
+      <h3>Aún no has recibido una factura para ser financiada</h3>
+      <p>
+        En cuanto recibamos la confirmación de una factura aceptada 
+        por <b>Grupo Modelo</b> te enviaremos un mail para que puedas pedir su financiamiento
+      </p>
+      <br>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Podrás disponer del 70% del monto total sin IVA de una factura 
+                                y el 30% del monto total de una orden de compra.
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-primary btn-block" id="myBtn">
+              Cómo se pagan las facturas?
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
+  
+    <h2>
+      Herramientas Visor
+    </h2>
+  <div class="row">
+
+                                    <div class="col-md-4 col-sm-12">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            
+                                            <img class="img-thumbnail" src="https://dev.visor.io/customer/images/listo400.jpg">
+                                            <h2>Visor analíticos de facturas</h2>
+                                            <p>Es la plataforma que 
+                                                trabaja de la mano con tus sistemas para organizar información financiera.
+                                            </p>
+                                            <ul class="list-unstyled" style="line-height: 2">
+                                                <li><span class="fa fa-check text-success"></span> Evita desperdicio de tiempo en reconciliar diferentes versiones y fuentes de datos.</li>
+                                                <li><span class="fa fa-check text-success"></span> Reduce errores de captura y duplicados.</li>
+                                                <li><span class="fa fa-check text-success"></span> Optimiza la visibilidad de la información y uso de efectivo.</li>
+                                                <li><span class="fa fa-check text-success"></span> Provee información del negocio en tiempo real.</li>
+                                            </ul>
+                                            <span class="btn btn-primary btn-block">Leer más</span>
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            
+                                            <img class="img-thumbnail" src="https://dev.visor.io/customer/images/ventas400.jpg">
+                                            <h2>Visor proyección de ventas</h2>
+                                            <p>
+                                                Realiza la proyección de ventas de tu empresa y toma decisiones correctas a tiempo.
+                                            </p>
+                                            <span class="btn btn-primary btn-block">Leer más</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            <img class="img-thumbnail" src="https://dev.visor.io/customer/images/simulador400.jpg">
+                                            <h2>Visor simulador de crédito</h2>
+                                            <p>
+                                                Es una aplicación que te ayudará a gestionar de manera correcta todos tus créditos.
+                                            </p>
+                                            <span class="btn btn-primary btn-block">Leer más</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+  </div>
+</div>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+                    <h1>
+            ¿Cómo se pagan las facturas?
+          </h1>
+          <div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  Paso uno
+                </div>
+                <div class="panel-body text-center">
+                  <i class="fa fa-file-text-o fa-5x" aria-hidden="true"></i>
+                  <h2>Facturas</h2>
+                  <p>Selecciona las facturas que deseas financiar y el porcentaje de financiamiento</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  Paso dos
+                </div>
+                <div class="panel-body text-center">
+                  <i class="fa fa-university fa-5x" aria-hidden="true"></i>
+                  <h2>Banco</h2>
+                  <p>Visor notifica al banco para que este te haga la transferencia en un máximo 1 día hábil</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  Paso tres
+                </div>
+                <div class="panel-body text-center">
+                  <i class="fa fa-money fa-5x" aria-hidden="true"></i>
+                  <h2>Depósito</h2>
+                  <p>El monto financiado se deposita en tu cuenta y recibirás una notificación via correo electrónica</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default pull-right" data-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+</script>
