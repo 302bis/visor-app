@@ -133,6 +133,11 @@
           url: '/home-banco',
           templateUrl: 'app/home-banco/home-banco.html'
       });
+    $stateProvider
+      .state('dispo_sin_fac', {
+          url: '/dispo_sin_fac',
+          templateUrl: 'app/dispo_sin_fac/dispo_sin_fac.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {
