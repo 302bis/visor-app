@@ -1,30 +1,121 @@
 <div ng-include="'app/components/menu/menu.html'"></div>
 <div class="menu-fix"></div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6"><h3>Tabs vertical side</h3>
-          	
-      <!-- tabs left -->
-      <div class="tabbable tabs-left">
-        <ul class="nav nav-tabs">
-          <li><a href="#a" data-toggle="tab">One</a></li>
-          <li class="active"><a href="#b" data-toggle="tab">Two</a></li>
-          <li><a href="#c" data-toggle="tab">Twee</a></li>
-          <li><a href="#d" data-toggle="tab">Four</a></li>
-        </ul>
-        <div class="tab-content">
-         <div class="tab-pane active" id="a">Lorem ipsum dolor sit amet, charetra varius quam sit amet vulputate. 
-         Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.</div>
-         <div class="tab-pane" id="b">Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-         Aliquam in felis sit amet augue.</div>
-         <div class="tab-pane" id="c">Thirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-         Quisque mauris augue, molestie tincidunt condimentum vitae. </div>
-         <div class="tab-pane" id="d">Four numero 4 damuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-         Quisque mauris augue, molestie tincidunt condimentum vitae. </div>
-        </div>
+<div class="container-fluid">
+  <div class="col-md-2 col-sm-3 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Oportunity information</div>
+      <ul class="list-group">
+        <li class="list-group-item">Fecha de vencimiento</li>
+        <li class="list-group-item">Documento</li>
+        <li class="list-group-item">Fecha de factura</li>
+        <li class="list-group-item">Concepto</li>
+        <li class="list-group-item">Cuenta</li>
+        <li class="list-group-item">Banco mnc</li>
+        <li class="list-group-item">Tipo de transacción</li>
+        <li class="list-group-item">Serie</li>
+        <li class="list-group-item">Justificante</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Datos gráfico
       </div>
-      <!-- /tabs -->
-      
-    </div>   
-  </div><!-- /row -->
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="">X:</label>
+          <input class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="">Y:</label>
+          <input class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="">Título del gráfico:</label>
+          <input class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="range" min="10" max="1000" step="10" />
+        </div>
+        <div class="form-group">
+          <label for="sel2">Escoge razón social:</label>
+          <select multiple class="form-control" id="sel2">
+            <option>Bodega_granos_el_alazan_y_el_rocio_sa</option>
+            <option>Distribuidora_de_carnes_rancho_las_lomas</option>
+            <option>Fruitex_de_mexico_sapi_de_cv</option>
+            <option>Grupo_industrial_vida_sa_de_cv</option>
+            <option>Grupo_internacional_de_aves_mi_lupita_sa</option>
+          </select>
+        </div>
+        <button class="btn btn-success">
+          Crear gráfico
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-7 col-sm-6 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Barras horizontales
+      </div>
+        <div id="graph2"></div>
+          <div class="panel-footer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+    </div>
+           
+
+
+  </div>
+
 </div>
+<script>
+  $(document).ready(function() {
+    $('#example').dataTable();
+  });
+
+
+  $(function () {
+    Highcharts.chart('graph2', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: 'Estimado de flujo de caja'
+      },
+      subtitle: {
+        text: ''
+      },
+      xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yAxis: {
+        title: {
+          text: 'Dinero'
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      },
+      series: [{
+        name: 'Flujo estimado',
+        data: [100000, 120000, 125000.5, 126000.5, 127000.4, 125000.5, 122000.2, 116000.5, 100000.3, 75000.3, 70000.9, 60000.6]
+      }, {
+          name: 'Flujo gastos actuales',
+          color:'red',
+          data: [90100, 100000, 92000.5, 94000.5, 90000.4, 92000.5, 91000.2, 92000.5, 93000.3, 90000.3, 91000.9, 90000.6]
+      },
+          {
+        name: 'Flujo real',
+        data: [80000,  90000,   104000.7, 110000,   112000.9, 110000.2, 108000.5, 106000.6, 103000.2, 97000.3, 94000.6, 92000.8]
+      }]
+    });
+  });
+</script>
