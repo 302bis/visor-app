@@ -138,6 +138,16 @@
           url: '/dispo_sin_fac',
           templateUrl: 'app/dispo_sin_fac/dispo_sin_fac.html'
       });
+    $stateProvider
+      .state('agenda', {
+          url: '/agenda',
+          templateUrl: 'app/agenda/agenda.html'
+      });
+    $stateProvider
+      .state('calendario', {
+          url: '/calendario',
+          templateUrl: 'app/agenda/calendario.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {
