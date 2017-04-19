@@ -148,6 +148,11 @@
           url: '/calendario',
           templateUrl: 'app/agenda/calendario.html'
       });
+    $stateProvider
+      .state('missolicitudes', {
+          url: '/missolicitudes',
+          templateUrl: 'app/missolicitudes/missolicitudes.html'
+      });
     /*
     $stateProvider
       .state('3-columns', {

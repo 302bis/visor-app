@@ -1,0 +1,141 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="menu-fix hidden-xs"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 animated fadeIn">
+      <h1>Agenda electrónica</h1>
+    </div>
+    <div class="col-md-4">
+       
+      <h1>
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-default" style="margin: 0 20px 0 0" data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-plus fa-2x"></i>
+          </button>
+          <button type="button" class="btn btn-default" ui-sref="calendario">
+            <i class="fa fa-calendar fa-2x"></i> Ver en calendario
+          </button>
+          
+        </div>
+      </h1>
+
+    </div>
+  </div>
+
+    <div class="clearfix"></div>
+    <div class="row animated bounceInUp">
+      <div class="alert alert-default fade in">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="close" data-dismiss="alert" aria-hidden="true">
+              <i class="fa fa-close" style="color:gray"></i>
+            </div>
+            <h4>
+                12/04/2017 - <i class="fa fa-phone" aria-hidden="true"></i> Llamar a Juan Villaflor, de Desierto de los leones S.A. de C.V.
+            </h4>
+            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row animated bounceInUp">
+      <div class="alert alert-default fade in">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="close" data-dismiss="alert" aria-hidden="true">
+              <i class="fa fa-close" style="color:gray"></i>
+            </div>
+            <h4>
+                1/04/2017 - <i class="fa fa-calendar" aria-hidden="true"></i> <i class="fa fa-map-marker" aria-hidden="true"></i> Cita en FEMA con Juan Arévalo
+            </h4>
+            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row animated bounceInUp">
+      <div class="alert alert-default fade in">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="close" data-dismiss="alert" aria-hidden="true">
+              <i class="fa fa-close" style="color:gray"></i>
+            </div>
+            <h4>
+                1/04/2017 - <i class="fa fa-exclamation-triangle" style="color:red;" aria-hidden="true"></i> Caronte S.A de C.V. acaba de complir un año con nosotros
+            </h4>
+            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row animated bounceInUp">
+      <div class="alert alert-default fade in">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="close" data-dismiss="alert" aria-hidden="true">
+              <i class="fa fa-close" style="color:gray"></i>
+            </div>
+            <h4>
+                1/04/2017 - <i class="fa fa-exclamation-triangle" style="color:red;" aria-hidden="true"></i> Caronte S.A de C.V. acaba de complir un año con nosotros
+            </h4>
+            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Agregar acción</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="sel1">Tipo de acción:</label>
+                <select class="form-control" id="sel1">
+                  <option>Llamada</option>
+                  <option>Cita</option>
+                  <option>Lead</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label>Fecha:</label>
+              <input type="date" class="form-control"></input>
+            </div>
+            <div class="col-md-6">
+              
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="comentario">Comentario:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Descartar</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
