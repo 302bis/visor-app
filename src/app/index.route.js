@@ -150,43 +150,29 @@
       });
     $stateProvider
       .state('missolicitudes', {
-          url: '/missolicitudes',
-          templateUrl: 'app/missolicitudes/missolicitudes.html'
-      });
-    /*
-    $stateProvider
-      .state('3-columns', {
-        url: '/3-columns',
-        templateUrl: 'app/3-columnas/index.php'
-      });
-
-    $stateProvider
-      .state('document-list', {
-        url: '/document-list',
-        templateUrl: 'app/main/document-list.html'
+          url: '/missolicitudes.index',
+          templateUrl: 'app/missolicitudes/index.html'
       });
     $stateProvider
-      .state('document-upload', {
-        url: '/document-upload',
-        templateUrl: 'app/main/document-upload.html'
+      .state('faq', {
+          url: '/faq',
+          templateUrl: 'app/faq/faq.html'
       });
     $stateProvider
-      .state('facturacion', {
-        url: '/facturacion',
-        templateUrl: 'app/main/facturacion.html'
+      .state('faq2', {
+          url: '/faq2',
+          templateUrl: 'app/faq2/faq2.html'
       });
     $stateProvider
-      .state('footer', {
-        url: '/footer',
-        templateUrl: 'app/main/facturacion.html'
+      .state('rev-camp', {
+          url: '/rev-camp',
+          templateUrl: 'app/rev-camp/rev-camp.html'
       });
     $stateProvider
-      .state('pyme-dashboard', {
-        url: '/pyme-dashboard',
-        templateUrl: 'app/main/pyme-dashboard.html'
-      });*/
-
-
+      .state('envio-originales', {
+          url: '/envio-originales',
+          templateUrl: 'app/envio-originales/envio-originales.html'
+      });
     $urlRouterProvider.otherwise('/');
   }
 

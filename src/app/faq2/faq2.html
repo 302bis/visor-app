@@ -1,0 +1,41 @@
+<div ng-include="'app/components/menu/menu.html'"></div>   
+  <div class="container faq2">
+    <h1 class="animated fadeIn">Preguntas frecuentes</h1>
+		<div class="tab_container">
+			<input id="tab1" type="radio" name="tabs" checked>
+			<label for="tab1"><span>Preguntas 1</span></label>
+
+			<input id="tab2" type="radio" name="tabs">
+			<label for="tab2"><span>Preguntas 2</span></label>
+
+			<input id="tab3" type="radio" name="tabs">
+			<label for="tab3"><span>Preguntas 3</span></label>
+
+			<input id="tab4" type="radio" name="tabs">
+			<label for="tab4"><span>Preguntas 4</span></label>
+
+			<input id="tab5" type="radio" name="tabs">
+			<label for="tab5"><span>Preguntas 5</span></label>
+
+			<section id="content1" class="tab-content">
+				<div ng-include="'app/faq2/grupo-1.html'"></div>  
+			</section>
+
+			<section id="content2" class="tab-content">
+			  <div ng-include="'app/faq2/grupo-2.html'"></div> 
+			</section>
+
+			<section id="content3" class="tab-content">
+				<div ng-include="'app/faq2/grupo-3.html'"></div>  
+			</section>
+
+			<section id="content4" class="tab-content">
+				<div ng-include="'app/faq2/grupo-1.html'"></div>  
+			</section>
+
+			<section id="content5" class="tab-content">
+			  <div ng-include="'app/faq2/grupo-2.html'"></div>  
+			</section>
+		</div>
+  </div>
+

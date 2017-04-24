@@ -1,0 +1,177 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="container">
+    <h1 class="animated fadeIn">
+      Envío de originales <br>
+      <small>(solicitados por la institución financiera)</small>
+    </h1>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4><b>A quién corresponda:</b></h4> 
+        Por medio de la presente se solicita la entrega en formato físico de la siguiente documentación. A saber:
+        <ul>
+          <li>Copia de acta constitutiva</li>
+          <li>Copia de crendencial de elector del obligado solidario</li>
+          <li>Copia de partida de nacimiento</li>
+          <li>Copia de acta de matrimonio</li>
+          <li>Copia de visa estadounidense</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block">
+          ¿Cómo hacer el envío?
+        </button>
+      </div>    
+      <div class="col-md-6">
+        <button type="button"  data-toggle="modal" data-target="#myModalDate" class="btn btn-primary btn-block">
+          Enviar
+        </button>
+      </div>   
+    </div>
+
+    <br><br>
+</div>
+
+
+
+<!-- Modal Pasos -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Envío de documentos en 3 sencillos pasos</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Paso 1
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <i class="fa fa-files-o fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-8">
+                    Reúna la documentación mencionada
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Paso 2
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <i class="fa fa-calendar fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-8">
+                    Defina la fecha de recogida de los documentos
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Paso 3
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <i class="fa fa-truck fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-8">
+                    Un recolector de visor pasará por su domicilio
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">¡Entendido!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal programa fecha de envio -->
+<div class="modal fade" id="myModalDate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Envío de documentos en 3 sencillos pasos</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Documentación a enviar
+              </div>
+              <div class="panel-body">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Copia de acta constitutiva</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio">copia de crendencial de elector de obligado solidario</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="radio ">
+                  <label><input type="radio" name="optradio">Copia de partida de nacimiento</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Copia de acta de matrimonio</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Copia de visa estadounidense</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Determinar fecha de recolección
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <i class="fa fa-calendar fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="date">
+                    <br><br>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">Recolectar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+<div class="panel panel-default panel-body">
+  <strong>¡Perfecto!</strong> Uno de nuestros mensajeros pasará por sus papeles en la fecha indicada. <br><br>
+  <button class="btn btn-success">
+    Imprimir comprobante
+  </button>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
