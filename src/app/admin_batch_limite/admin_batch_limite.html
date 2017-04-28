@@ -1,0 +1,28 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="container">
+  <h1 class="animated fadeIn">
+    Vista de cargas
+  </h1>
+  <uib-tabset type="pills">
+    <uib-tab heading="Límite de crédito">
+      <div class="animated fadeIn" ui-view="limite"></div>
+    </uib-tab>
+    <uib-tab heading="Facturas aceptadas">
+      <div class="animated fadeIn" ui-view="facturas_aceptadas"></div>
+    </uib-tab>
+    <uib-tab heading="Facturas rechazadas">
+      <div class="animated fadeIn" ui-view="facturas_rechazadas"></div>
+    </uib-tab>
+    <uib-tab heading="Facturas financiadas">
+      <div class="animated fadeIn" ui-view="facturas_financiadas"></div>
+    </uib-tab>
+    <uib-tab heading="Facturas financiadas pagadas">
+      <div class="animated fadeIn" ui-view="facturas_pagadas"></div>
+    </uib-tab>
+    <uib-tab heading="Cascada de cobro">
+      <div class="animated fadeIn" ui-view="cascada"></div>
+  </uib-tabset>
+    <br><br>
+</div>
+
+

@@ -54,6 +54,11 @@
         templateUrl: 'app/home/home.html'
       });
     $stateProvider
+      .state('homepyme2', {
+        url: '/homepyme2',
+        templateUrl: 'app/home2/home.html'
+      });
+    $stateProvider
       .state('ciec_form', {
         url: '/ciec_form',
         templateUrl: 'app/ciec_form/ciec_form.html'
@@ -98,31 +103,92 @@
           url: '/bolas',
           templateUrl: 'app/bolas/bolas.html'
       });
+
+
+
+
     $stateProvider
       .state('convenyor-config', {
           url: '/convenyor-config',
           templateUrl: 'app/convenyor/convenyor-config.html'
       });
+
+
     $stateProvider
-      .state('mnc-1', {
+      .state(
+        'convenyor-pyme', {
+          url: '/convenyor-pyme',
+          views:{
+              '':{
+                templateUrl: 'app/convenyor/convenyor-pyme.html'
+              },
+              'mnc-1@convenyor-pyme' :{
+                templateUrl: 'app/convenyor/mnc-1.html'
+              },
+              'mnc-2@convenyor-pyme' :{
+                templateUrl: 'app/convenyor/mnc-2.html'
+              },
+              'mnc-3@convenyor-pyme' :{
+                templateUrl: 'app/convenyor/mnc-3.html'
+              },
+              'mnc-4@convenyor-pyme' :{
+                templateUrl: 'app/convenyor/mnc-4.html'
+              }
+
+          }
+          
+      });
+    $stateProvider
+      .state('convenyor-pyme.mnc-1', {
           url: '/mnc-1',
           templateUrl: 'app/convenyor/mnc-1.html'
       });
     $stateProvider
-      .state('mnc-2', {
+      .state('convenyor-pyme.mnc-2', {
           url: '/mnc-2',
           templateUrl: 'app/convenyor/mnc-2.html'
       });
     $stateProvider
-      .state('mnc-3', {
+      .state('convenyor-pyme.mnc-3', {
           url: '/mnc-3',
           templateUrl: 'app/convenyor/mnc-3.html'
       });
     $stateProvider
-      .state('mnc-4', {
+      .state('convenyor-pyme.mnc-4', {
           url: '/mnc-4',
           templateUrl: 'app/convenyor/mnc-4.html'
       });
+
+
+    $stateProvider
+      .state('conveyor-banco', {
+          url: '/banco',
+          templateUrl: 'app/conveyor-banco/conveyor-banco.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-1', {
+          url: '/banco-1',
+          templateUrl: 'app/conveyor-banco/banco-1.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-2', {
+          url: '/conveyor-banco-2',
+          templateUrl: 'app/conveyor-banco/banco-2.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3', {
+          url: '/conveyor-banco-3',
+          templateUrl: 'app/conveyor-banco/banco-3.html'
+      });
+
+
+
+
+
+
+
+
+
     $stateProvider
       .state('login', {
           url: '/login',
@@ -173,6 +239,43 @@
           url: '/envio-originales',
           templateUrl: 'app/envio-originales/envio-originales.html'
       });
+
+    $stateProvider
+      .state(
+        'admin_batch_limite', {
+          url: '/admin_batch_limite',
+          views:{
+              '':{
+                templateUrl: 'app/admin_batch_limite/admin_batch_limite.html'
+              },
+              'cascada@admin_batch_limite' :{
+                templateUrl: 'app/admin_batch_limite/cascada.html'
+              },
+              'limite@admin_batch_limite' :{
+                templateUrl: 'app/admin_batch_limite/limite.html'
+              },
+              'facturas_aceptadas@admin_batch_limite' :{
+                templateUrl: 'app/admin_batch_limite/facturas_aceptadas.html'
+              },
+              'facturas_financiadas@admin_batch_limite' :{
+                templateUrl: 'app/admin_batch_limite/facturas_financiadas.html'
+              },
+              'facturas_pagadas@admin_batch_limite' :{
+                templateUrl: 'app/admin_batch_limite/facturas_pagadas.html'
+              },
+              'facturas_rechazadas@admin_batch_limite' :{
+                templateUrl: 'app/admin_batch_limite/facturas_rechazadas.html'
+              }
+          }
+          
+      });
+
+
+
+
+
+      
+
     $urlRouterProvider.otherwise('/');
   }
 

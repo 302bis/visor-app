@@ -1,0 +1,53 @@
+<div class="container">
+    <br>
+   <div class="row well">
+      <h3 class="text-center">
+         Seleccione el archivo CSV correspondiente <br><br>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#paybook">Seleccionar archivo</button>
+         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#estados_de_cuenta">Cargar</button>
+      </h3>
+   </div>
+   <br>
+</div>
+<br>
+        <div class="container">
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>pyme</th>
+                <th>RFC</th>
+                <th>Asignar límite</th>
+            </tr>
+        </thead>
+ 
+        <tbody>
+            <tr>
+                <td>pyme Dimitrj</td>
+                <td>BODI890610MM6</td>
+                <td><button class="btn btn-primary">Asignar Límite</button></td>
+            </tr>
+            <tr>
+                <td>pyme prueba</td>
+                <td>BODI890610MM6</td>
+                <td><button class="btn btn-primary">Asignar Límite</button></td>
+            </tr>
+            <tr>
+                <td>otra pyme</td>
+                <td>BODI890610MM6</td>
+                <td><button class="btn btn-primary">Asignar Límite</button></td>
+            </tr>
+        </tbody>
+    </table>
+            
+        </div>
+<br>
+
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable( {
+        responsive: true
+    } );
+} );
+</script>

@@ -1,0 +1,61 @@
+
+<div class="col-sm-12">
+    <div class="panel panel-default text-center">
+        <div class="panel-body">
+             <h1 class="countdown_fourth"></h1>
+            <h2>Te faltan 5 requisitos para obtener tu crédito</h2>
+        </div>
+    </div>
+</div>   
+<div class="">
+    <div class="col-sm-12 ">
+        <div class="panel card banner">
+            <div class="panel-body">
+                <div class="banner-txt">
+                    <h1 class="first pull-right">¿Problemas con tu</h1>
+                    <div class="clearfix"></div>
+                    <h1 class="second pull-right" style="display:none">flujo de efectivo?</h1>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="btn btn-primary btn-lg third pull-right" style="display:none">Comienza tu solicitud aquí</div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+<script>
+    $('.first').addClass('animated fadeInRight');
+
+setTimeout(function () {
+    $('.second').show().addClass('animated fadeInRight');}, 500
+);
+setTimeout(function () {
+    $('.third').show().addClass('animated fadeInUp');}, 1500
+);
+</script>
+<script>
+ $(function() {
+
+function countUp4(count) {
+    var div_by = 100,
+        speed = Math.round(count / div_by),
+        $display = $('.countdown_fourth'),
+        run_count = 1,
+        int_speed = 24;
+    var int = setInterval(function () {
+        if (run_count < div_by) {
+            $display.text(speed * run_count);
+            run_count++;
+        } else if (parseInt($display.text()) < count) {
+            var curr_count = parseInt($display.text()) + 1;
+            $display.text(curr_count);
+        } else {
+            clearInterval(int);
+        }
+    }, int_speed);
+}
+countUp4(25);
+
+		   });
+</script>
