@@ -178,14 +178,37 @@
     $stateProvider
       .state('conveyor-banco.banco-3', {
           url: '/conveyor-banco-3',
-          templateUrl: 'app/conveyor-banco/banco-3.html'
+          views:{
+            '':{
+              templateUrl: 'app/conveyor-banco/banco-3.html'
+            },
+            'cuadro-mando@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/cuadro.html'
+              },
+            'evo@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/evo.html'
+              },
+            'avance@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/avance.html'
+              },
+            'vs@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/vs.html'
+              },
+            'cosecha@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/cosecha.html'
+              },
+            'tiempos@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/tiempos.html'
+              },
+            'entradas-cartera@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/entradas-cartera.html'
+              },
+            'salidas-cartera@conveyor-banco.banco-3' :{
+                templateUrl: 'app/conveyor-banco/graficas/salidas-cartera.html'
+              }
+          }
+          
       });
-
-
-
-
-
-
 
 
 
@@ -238,6 +261,11 @@
       .state('envio-originales', {
           url: '/envio-originales',
           templateUrl: 'app/envio-originales/envio-originales.html'
+      });
+    $stateProvider
+      .state('miayuda', {
+          url: '/miayuda',
+          templateUrl: 'app/miayuda/miayuda.html'
       });
 
     $stateProvider

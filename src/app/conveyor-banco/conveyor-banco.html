@@ -1,13 +1,12 @@
 <div ng-include="'app/components/menu/menu.html'"></div>
-<div class="container">
-    <div class="list-group list-group-horizontal">
-        <a ui-sref="conveyor-banco.banco-1" ui-sref-active="active" class="list-group-item">Seleccionar campañas</a>
-        <a ui-sref="conveyor-banco.banco-2" ui-sref-active="active" class="list-group-item">Seleccionar métrica</a>
-        <a ui-sref="conveyor-banco.banco-3" ui-sref-active="active" class="list-group-item">Ver analíticas</a>
+<div class="animated fadeIn container">
+    <div class="container">
+        <div ui-view=""></div>
+        <div class="list-group list-group-horizontal">
+            <a ui-sref="conveyor-banco.banco-1" ui-sref-active="active" class="list-group-item">Seleccionar campañas</a>
+            <a ui-sref="conveyor-banco.banco-2" ui-sref-active="active" class="list-group-item">Seleccionar métrica</a>
+            <a ui-sref="conveyor-banco.banco-3" ui-sref-active="active" class="list-group-item">Ver analíticas</a>
+        </div>
     </div>
 </div>
-<div class="container">
-    <div ui-view=""></div>
-</div>
-
 

@@ -1,358 +1,14 @@
+<h1>
+    Avance de campaña
+</h1>
 
-    <h2>Dataset uno</h2>
-    <ul class="nav nav-pills">
-        <li class="active"><a href="#">Dataset 1</a></li>
-        <li><a href="#">Dataset 2</a></li>
-        <li><a href="#">Dataset 3</a></li>
-    </ul>
-    <br>
-    <div class="animated fadeIn row">
-        <div class="col-md-8">
-            <div class="panel">
-                <div id="graph2"></div>
-                 <div class="panel-footer">
-                    <div class="row">
-                      <div class="col-md-9 col-sm-8 col-xs-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      </div>
-                      <div class="col-md-3 col-sm-4 col-xs-4">
-                        <button class="btn btn-success pull-right">
-                          Editar gráfico
-                        </button>
-                      </div>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-        <div class="col-md-4">
-            <div class="panel">
-                <div id="pie"></div>
-                <div class="panel-footer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            
-        </div>
-        <div class="col-md-12">
-            <div class="panel">
-                <div id="graph3"></div>
-                <div class="panel-footer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            
-        </div>
-        <div class="col-md-6">
-            <div class="panel">
-                <div id="rangos"></div>
-                <div class="panel-footer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="panel">
-                <div id="barras"></div>
-                <div class="panel-footer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-
-<br>   
-<br>
-<script>
-  $(document).ready(function() {
-    $('#example').dataTable();
-  });
-
-
-  $(function () {
-    Highcharts.chart('graph2', {
-      chart: {
-        type: 'line'
-      },
-      title: {
-        text: 'Estimado de flujo de caja'
-      },
-      subtitle: {
-        text: ''
-      },
-      xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      },
-      yAxis: {
-        title: {
-          text: 'Dinero'
-        }
-      },
-      plotOptions: {
-        line: {
-          dataLabels: {
-            enabled: true
-          },
-          enableMouseTracking: false
-        }
-      },
-      series: [{
-        name: 'Flujo estimado',
-        data: [100000, 120000, 125000.5, 126000.5, 127000.4, 125000.5, 122000.2, 116000.5, 100000.3, 75000.3, 70000.9, 60000.6]
-      }, {
-          name: 'Flujo gastos actuales',
-          color:'red',
-          data: [90100, 100000, 92000.5, 94000.5, 90000.4, 92000.5, 91000.2, 92000.5, 93000.3, 90000.3, 91000.9, 90000.6]
-      },
-          {
-        name: 'Flujo real',
-        data: [80000,  90000,   104000.7, 110000,   112000.9, 110000.2, 108000.5, 106000.6, 103000.2, 97000.3, 94000.6, 92000.8]
-      }]
-    });
-  });
-</script>
-<script>
-  Highcharts.chart('pie', {
-    chart: {
-      type: 'pie',
-      options3d: {
-        enabled: true,
-        alpha: 45,
-        beta: 0
-      }
-    },
-    title: {
-      text: 'Share of wallet de las transacciones del cliente (anual)'
-    },
-    tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    colors: ['#cccccc', '#002663'],
-    plotOptions: {
-      pie: {
-        allowPointSelect: true,
-        cursor: 'pointer',
-        depth: 35,
-        dataLabels: {
-          enabled: true,
-          format: '{point.name}'
-        }
-      }
-    },
-    series: [{
-      type: 'pie',
-      name: 'Market share',
-      data: [
-        ['Otros', 73],
-        ['Amex', 27]
-      ]
-    }]
-  });
-</script>
-<script>
-$(function () {
-    Highcharts.chart('graph3', {
-        chart: {
-            type: 'line'
-        },
-        title: {
-            text: 'Gráfica de ganancias interanuales'
-        },
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
-        yAxis: {
-            title: {
-                text: 'Dinero'
-            }
-        },
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: false
-            }
-        },
-        series: [{
-            name: 'Flujo estimado de beneficios',
-            data: [100000, 120000, 125000.5, 126000.5, 127000.4, 125000.5, 122000.2, 116000.5, 100000.3, 75000.3, 70000.9, 90000.6]
-        }, {
-            name: 'Flujo real',
-            data: [80000,  150000,   104000.7, 126000,   160000.9, 80000.2, 140000.5, 106000.6, 110000.2, 75000.3, 94000.6, 82000.8]
-        }]
-    });
-});
-
-</script>
-<script>
-  var chart = Highcharts.chart('barras', {
-
-    title: {
-      text: 'pymes con más ganancias'
-    },
-
-    
-
-    xAxis: {
-      categories: ['Propimex', 'Grupo comercual M', 'Cervecería Modelo', 'Tecno Pack Corrugadora', 'PFS de México']
-    },
-    yAxis: [{
-      title: null
-    }],
-
-    series: [{
-      type: 'column',
-      colorByPoint: true,
-      data: [12.4, 12.6, 12.9, 13.8, 48.3],
-      showInLegend: false
-    }]
-
-  });
-
-
-  $('#plain').click(function () {
-    chart.update({
-      chart: {
-        inverted: false,
-        polar: false
-      },
-      subtitle: {
-        text: 'Barras'
-      }
-    });
-  });
-
-  $('#inverted').click(function () {
-    chart.update({
-      chart: {
-        inverted: true,
-        polar: false
-      },
-      subtitle: {
-        text: 'Barras horizontales'
-      }
-    });
-  });
-
-  $('#polar').click(function () {
-    chart.update({
-      chart: {
-        inverted: false,
-        polar: true
-      },
-      subtitle: {
-        text: 'Polar'
-      }
-    });
-
-  });
-
-</script>
-<script>
-
-  var ranges = [
-    [1246406400000, 2.1, 0.65], 
-    [1246492800000, 2, 0.7], 
-    [1246579200000, 1.9, 0.73], 
-    [1246665600000, 1.85, 0.74], 
-    [1246752000000, 1.8, 0.75], 
-    [1246838400000, 1.75, 0.76], 
-    [1246924800000, 1.68, 0.77], 
-    [1247011200000, 1.65, 0.78], 
-    [1247097600000, 1.6, 0.8], 
-    [1247184000000, 1.55, 0.81], 
-    [1247270400000, 1.53, 0.8], 
-    [1247356800000, 1.5, 0.79], 
-    [1247443200000, 1.49, 0.78], 
-    [1247529600000, 1.46, 0.77], 
-    [1247616000000, 1.44,  0.75], 
-    [1247702400000, 1.44,  0.72], 
-    [1247788800000, 1.44,  0.66], 
-    [1247875200000, 1.44,  0.6], 
-    [1247961600000, 1.45,  0.56], 
-    [1248048000000, 1.47,  0.5], 
-    [1248134400000, 1.49,  0.45], 
-    [1248220800000, 1.52,  0.4], 
-    [1248307200000, 1.54,  0.3], 
-    [1248393600000, 1.56,  0.2]
-  ];
-
-  averages = [
-    [1246406400000, 2.8], 
-    [1246492800000, 0.5], 
-    [1246579200000, 1.6], 
-    [1246665600000, 1.2], 
-    [1246752000000, 1.4], 
-    [1246838400000, 2.6], 
-    [1246924800000, 0.5], 
-    [1247011200000, 0.3], 
-    [1247097600000, 0.8], 
-    [1247184000000, 0.7], 
-    [1247270400000, 1.6], 
-    [1247356800000, 1.1], 
-    [1247443200000, 0.1], 
-    [1247529600000, 0], 
-    [1247616000000, 1], 
-    [1247702400000, 3.6], 
-    [1247788800000, 0.8], 
-    [1247875200000, 0.3], 
-    [1247961600000, 0.7], 
-    [1248048000000, 0.4], 
-    [1248134400000, 1.9], 
-    [1248220800000, 2], 
-    [1248307200000, 0.6], 
-    [1248393600000, 0.3]
-  ];
-
-  Highcharts.chart('rangos', {
-
-    title: {
-      text: 'Rango de exito en meses'
-    },
-
-    xAxis: {
-      type: 'datetime'
-    },
-
-    yAxis: {
-      title: {
-        text: null
-      }
-    },
-
-    tooltip: {
-      crosshairs: true,
-      shared: true,
-      valueSuffix: 'M'
-    },
-
-    legend: {
-    },
-
-    series: [{
-      name: 'Millones',
-      data: averages,
-      zIndex: 1,
-      marker: {
-        fillColor: 'white',
-        lineWidth: 2,
-        lineColor: Highcharts.getOptions().colors[0]
-      }
-    }, {
-      name: 'Range',
-      data: ranges,
-      type: 'arearange',
-      lineWidth: 0,
-      linkedTo: ':previous',
-      color: Highcharts.getOptions().colors[0],
-      fillOpacity: 0.3,
-      zIndex: 0
-    }]
-  });
-</script>
+<div ui-view="cuadro-mando"></div>
+<div ui-view="evo"></div>
+<div ui-view="avance"></div>
+<div ui-view="vs"></div>
+<div ui-view="cosecha"></div>
+<div ui-view="tiempos"></div>
+<div ui-view="entradas-cartera"></div>
+<div ui-view="salidas-cartera"></div>
+<h1>Vencimiento de carteras</h1>
+<h1>Inventario de la cartera de impago</h1>
