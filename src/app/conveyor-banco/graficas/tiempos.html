@@ -1,0 +1,125 @@
+
+    <h1 class="animated fadeInRight">
+    Tiempos de respuesta
+
+                            <button class="btn btn-success pull-right">
+                            Editar gráfico
+                        </button>
+</h1>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="barras-hori"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="dos"></div>
+                        </div>
+                    </div>
+<script>
+    Highcharts.chart('barras-hori', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Proceso'
+        },
+        xAxis: {
+            categories: ['Proceso Tradicional (días)', 'Campaña'],
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                    }
+                }
+            },
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total fruit consumption'
+            },
+        },
+
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                }
+            },
+        },
+        series: [
+            {
+            name: 'Formalización',
+            data: [18, 1]
+            },{
+            name: 'Admisión',
+            data: [7, 1]
+            },{
+            name: 'Promoción',
+            data: [10, 1]
+            },{
+            name: 'Anaálisis',
+            data: [10, 1]
+        }]
+    });
+</script>
+<script>
+    Highcharts.chart('dos', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Impacto'
+        },
+        subtitle: {
+            text: false
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Total percent market share'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}%'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+        },
+
+        series: [{
+            name: false,
+            colorByPoint: true,
+            data: [{
+                name: 'Tradicional',
+                y: 43.33,
+                drilldown: 'Tradicional'
+            },{
+                name: 'Campaña',
+                y: 2,
+                drilldown: 'Campaña'
+            }]
+        }]
+    });
+</script>

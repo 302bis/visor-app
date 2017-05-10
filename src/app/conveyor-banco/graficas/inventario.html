@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-9">
+        <h1 class="animated fadeInRight">
+        Inventario de la cartera de impago
+        </h1>
+    </div>
+    <div class="col-md-3">
+        <h1>
+            <button class="btn btn-success btn-lg btn-block">
+                <i class="fa fa-print" aria-hidden="true"></i> Imprimir informe 
+                <br>
+                completo
+            </button>
+        </h1>
+    </div>
+</div>
+  <uib-tabset type="pills">
+    <uib-tab heading="Resúnen general">
+        <br>
+        <div ui-view="inventario-cartera"></div>
+        <br>
+        <br>               
+    </uib-tab>
+    <uib-tab heading="Región centro">
+        <br>
+        <div ui-view="inventario-region"></div>
+        <br><br>
+    </uib-tab>
+    <uib-tab heading="Otras regiones">
+        <br>
+        <div ui-view="inventario-otra-region"></div>
+    </uib-tab>
+    <uib-tab heading="Distribución de los impagos">
+        <br>
+        <div ui-view="inventario-distri"></div>
+        <br><br>
+    </uib-tab>
+    <uib-tab heading="Impagos por monto">
+        <br>
+        <div ui-view="impagos-monto"></div>
+    </uib-tab>
+    <uib-tab heading="Impagos por caso">
+        <br>
+        <div ui-view="impagos-casos"></div>
+    </uib-tab>
+  </uib-tabset>
+
+
+
+
+
+
+
+
+

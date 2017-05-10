@@ -209,8 +209,89 @@
           }
           
       });
+    $stateProvider
+      .state('conveyor-banco.banco-3.inventario', {
+          url: '/conveyor-banco-3.inventario',
+          views:{
+            '':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario.html'
+            },
+            'inventario-cartera@conveyor-banco.banco-3.inventario':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario/inventario-cartera.html'
+            },
+            'inventario-region@conveyor-banco.banco-3.inventario':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario/region.html'
+            },
+            'inventario-otra-region@conveyor-banco.banco-3.inventario':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario/otra-region.html'
+            },
+            'inventario-distri@conveyor-banco.banco-3.inventario':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario/distri.html'
+            },
+            'impagos-monto@conveyor-banco.banco-3.inventario':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario/impagos-monto.html'
+            },            
+            'impagos-casos@conveyor-banco.banco-3.inventario':{
+              templateUrl: 'app/conveyor-banco/graficas/inventario/impagos-casos.html'
+            }
+          }
+      });
 
 
+
+
+    $stateProvider
+      .state('conveyor-banco.banco-3.cuadro', {
+          url: '/conveyor-banco-3.cuadro',
+          templateUrl: 'app/conveyor-banco/graficas/cuadro.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.evo', {
+          url: '/conveyor-banco-3.evo',
+          templateUrl: 'app/conveyor-banco/graficas/evo.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.avance', {
+          url: '/conveyor-banco-3.avance',
+          templateUrl: 'app/conveyor-banco/graficas/avance.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.vs', {
+          url: '/conveyor-banco-3.vs',
+          templateUrl: 'app/conveyor-banco/graficas/vs.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.cosecha', {
+          url: '/conveyor-banco-3.cosecha',
+          templateUrl: 'app/conveyor-banco/graficas/cosecha.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.tiempos', {
+          url: '/conveyor-banco-3.tiempos',
+          templateUrl: 'app/conveyor-banco/graficas/tiempos.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.entradas-cartera', {
+          url: '/conveyor-banco-3.entradas-cartera',
+          templateUrl: 'app/conveyor-banco/graficas/entradas-cartera.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.salidas-cartera', {
+          url: '/conveyor-banco-3.salidas-cartera',
+          templateUrl: 'app/conveyor-banco/graficas/salidas-cartera.html'
+      });
+    $stateProvider
+      .state('conveyor-banco.banco-3.vencimiento', {
+          url: '/conveyor-banco-3.vencimiento',
+          templateUrl: 'app/conveyor-banco/graficas/vencimiento.html'
+      });
+
+
+    $stateProvider
+      .state('conveyor-banco.banco-3.avance-campana', {
+          url: '/conveyor-banco-3.avance-campana',
+          templateUrl: 'app/conveyor-banco/graficas/avance-campana.html'
+      });
 
     $stateProvider
       .state('login', {
@@ -269,8 +350,7 @@
       });
 
     $stateProvider
-      .state(
-        'admin_batch_limite', {
+      .state( 'admin_batch_limite', {
           url: '/admin_batch_limite',
           views:{
               '':{
@@ -300,9 +380,58 @@
 
 
 
+    $stateProvider
+      .state('banco-app', {
+          url: '/banco-app',
+          templateUrl: 'app/banco-app/banco-app.html'
+      });
+    $stateProvider
+      .state('pyme-detalle', {
+          url: '/pyme-detalle',
+          templateUrl: 'app/banco-app/pyme-detalle.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.home', {
+          url: '/pyme-detalle-home',
+          templateUrl: 'app/banco-app/views/home.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.historial', {
+          url: '/pyme-detalle-historial',
+          templateUrl: 'app/banco-app/views/historial.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.admin-proceso', {
+          url: '/pyme-detalle-admin-proceso',
+          templateUrl: 'app/banco-app/views/admin-proceso.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.doc-adicionales', {
+          url: '/pyme-detalle-doc-adicionales',
+          templateUrl: 'app/banco-app/views/doc-adicionales.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.doc-camp', {
+          url: '/pyme-detalle-doc-camp',
+          templateUrl: 'app/banco-app/views/doc-camp.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.expediente', {
+          url: '/pyme-detalle-expediente',
+          templateUrl: 'app/banco-app/views/expediente.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.gerente-cuenta', {
+          url: '/pyme-detalle-gerente-cuenta',
+          templateUrl: 'app/banco-app/views/gerente-cuenta.html'
+      });
+    $stateProvider
+      .state('pyme-detalle.texto-solicitud', {
+          url: '/pyme-detalle-texto-solicitud',
+          templateUrl: 'app/banco-app/views/texto-solicitud.html'
+      });
 
 
-      
 
     $urlRouterProvider.otherwise('/');
   }

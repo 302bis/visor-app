@@ -1,0 +1,98 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="animated fadeInDown container-fluid home-banco">
+    <div class="home-banco row">
+		<div class="col-md-12">
+            <aside>
+                <div class="panel panel-default sidebar">
+                <div class="panel-body">
+                    <div class="profile-picture">
+                        <img src="https://dev.visor.io/admin/info_campanas/005/logo_Campana_005.png">
+                    </div>
+                    <br>
+                    <p class="text-center name-pyme">Banco B X +<br></p>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                </div>
+            </aside>
+            <div class="home-banco-content">
+                <div class="col-sm-6">
+                    <h1>Notificaciones</h1>
+                </div>
+                <div class="col-sm-6 select-camp">
+                    <select class="form-control">
+                        <option>Seleccionar campaña</option>
+                        <option>AMH130628UI1</option>
+                    </select>
+                </div>
+                   
+                <div class="col-sm-12">
+                    <table id="bank-notifications" class="display" width="100%" data-page-length="25" data-order="[[ 1, &quot;asc&quot; ]]">
+                        <thead>
+                            <tr>
+                                <th>RFC Empresa</th>
+                                <th>Pyme</th>
+                                <th>ID</th>
+                                <th>Estatus</th>
+                                <th>Fecha</th>
+                                <th>Alerta</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CUBF790808F32</td>
+                                <td>Franco SAPI de CV</td>
+                                <td>005</td>
+                                <td><a href="#">Perfil</a></td>
+                                <td>30/11/2016</td>
+                                <td>nada</td>
+                                <td><button ui-sref="pyme-detalle.home" type="button" class="btn btn-default"><i class="fa fa-info fa-lg"></i></button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-check-square-o fa-lg"></i></button>
+                                <button type="button" class="btn btn-success"><i class="fa fa-print fa-lg"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>CUBF790808F32</td>
+                                <td>Franco SAPI de CV</td>
+                                <td>005</td>
+                                <td><a href="#">Perfil</a></td>
+                                <td>30/11/2016</td>
+                                <td>nada</td>
+                                <td><button ui-sref="pyme-detalle.home" type="button" class="btn btn-default"><i class="fa fa-info fa-lg"></i></button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-check-square-o fa-lg"></i></button>
+                                <button type="button" class="btn btn-success"><i class="fa fa-print fa-lg"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>CUBF790808F32</td>
+                                <td>Franco SAPI de CV</td>
+                                <td>005</td>
+                                <td><a href="#">Perfil</a></td>
+                                <td>30/11/2016</td>
+                                <td>nada</td>
+                                <td><button ui-sref="pyme-detalle.home" type="button" class="btn btn-default"><i class="fa fa-info fa-lg"></i></button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-check-square-o fa-lg"></i></button>
+                                <button type="button" class="btn btn-success"><i class="fa fa-print fa-lg"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>CUBF790808F32</td>
+                                <td>Franco SAPI de CV</td>
+                                <td>005</td>
+                                <td><a href="#">Perfil</a></td>
+                                <td>30/11/2016</td>
+                                <td>nada</td>
+                                <td><button ui-sref="pyme-detalle.home" type="button" class="btn btn-default"><i class="fa fa-info fa-lg"></i></button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-check-square-o fa-lg"></i></button>
+                                <button type="button" class="btn btn-success"><i class="fa fa-print fa-lg"></i></button></td>
+                            </tr>                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#bank-notifications').dataTable();
+    });
+</script>

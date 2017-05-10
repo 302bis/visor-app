@@ -1,0 +1,72 @@
+<h1 class="animated fadeInRight">
+  Avance regional
+  <button class="btn btn-success pull-right">
+    Editar gráfico
+  </button>
+</h1>
+
+        <div id="barras2"></div>
+<div class="clearfix"></div>
+<br>
+<div class="well">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+            
+<script>
+  Highcharts.chart('barras2', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: false
+    },
+    xAxis: {
+        categories: ['Sureste', 'Occidente', 'Norte', 'Noreste', 'Metro sur', 'Metro Norte'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: false,
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' millions'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'Horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Ofertados',
+        data: [21, 29, 18, 46, 13, 34]
+    },  {
+        name: 'Formalizados',
+        data: [0, 2, 0, 3, 2, 5]
+    }]
+});
+</script>

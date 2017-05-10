@@ -1,0 +1,203 @@
+<div class="panel">
+    <div class="panel-body">
+        <div class="col-md-4">
+            <div id="mas"></div>
+        </div>
+        <div class="col-md-4">
+            <div id="menos"></div>
+        </div>
+        <div class="col-md-4">
+            <div id="total"></div>
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    Highcharts.chart('mas', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Region centro > 20 millones'
+        },
+        subtitle: {
+            text: null
+        },
+        xAxis: {
+            categories: ['Empresa 1', 'Empresa 2'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: null,
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: '30-06-16',
+            data: [5552, 21513]
+        },{
+            name: '30-06-16',
+            data: [20602, 0]
+        }, {
+            name: 'Variación',
+            data: [26153, 21513]
+        }]
+    });
+</script>
+<script>
+    Highcharts.chart('menos', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Region centro < 20 millones'
+        },
+        subtitle: {
+            text: null
+        },
+        xAxis: {
+            categories: ['Resto'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: null,
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: '30-06-16',
+            data: [51451]
+        },{
+            name: '30-06-16',
+            data: [99385]
+        }, {
+            name: 'Variación',
+            data: [150836]
+        }]
+    });
+</script>
+<script>
+    Highcharts.chart('total', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Total región centro'
+        },
+        subtitle: {
+            text: null
+        },
+        xAxis: {
+            categories: ['Total'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: null,
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: 0,
+            y: 30,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: '30-06-16',
+            data: [78516]
+        },{
+            name: '30-06-16',
+            data: [119987]
+        }, {
+            name: 'Variación',
+            data: [198503]
+        }]
+    });
+</script>

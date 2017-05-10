@@ -1,0 +1,116 @@
+<h1 class="animated fadeInRight">
+  Evolución comercial
+  <button class="btn btn-success pull-right">
+    Editar gráfico
+  </button>
+</h1>
+                    <div class="row">
+                    <div class="col-md-8">
+                        <div id="barras"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="pie"></div>
+                    </div>
+                    </div>
+
+
+<div class="clearfix"></div>
+<br>
+
+                      <div class="well">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </div>
+                        
+    </div>
+<script>
+  var chart = Highcharts.chart('barras', {
+
+    title: {
+      text: null
+    },
+
+    
+
+    xAxis: {
+      categories: ['Total', 'Aceptado', 'Seccisión pendiente', 'Rechazo']
+    },
+    yAxis: [{
+      title: null
+    }],
+
+    series: [{
+      type: 'column',
+      colorByPoint: true,
+      data: [253, 101, 14, 118],
+      showInLegend: false
+    }]
+
+  });
+
+
+  $('#plain').click(function () {
+    chart.update({
+      chart: {
+        inverted: false,
+        polar: false
+      },
+      subtitle: {
+        text: 'Barras'
+      }
+    });
+  });
+
+  $('#polar').click(function () {
+    chart.update({
+      chart: {
+        inverted: false,
+        polar: true
+      },
+      subtitle: {
+        text: 'Polar'
+      }
+    });
+
+  });
+
+</script>
+<script>
+  Highcharts.chart('pie', {
+    chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+    title: {
+      text: false
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    colors: ['#81F7F3', '#2ECCFA', '#74DF00', '#FF8000', '#AC58FA','#AEB404','#2ECCFA'],
+    plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+    series: [{
+      type: 'pie',
+      name: 'Market share',
+      data: [
+        ['Otros', 7],
+        ['Requiere cambios al plazo y monto', 5],
+        ['Requiere mantener otras líneas CP', 5],
+        ['Condiciones de tasa y comisión', 16],
+        ['Refiere problemas internos', 5],
+        ['Requiere otro producto', 7],
+        ['No necesita crédito', 41]
+      ]
+    }]
+  });
+</script>

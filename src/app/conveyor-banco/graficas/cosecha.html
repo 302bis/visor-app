@@ -1,0 +1,208 @@
+    <h1 class="animated fadeInRight">
+    Calidad de la cosecha
+
+                            <button class="btn btn-success pull-right">
+                            Editar gráfico
+                        </button>
+</h1>
+
+
+                <div class="col-md-8">
+                    <div id="curvas"></div>
+                </div>
+                <div class="col-md-4">
+                    <div id="barrash"></div>
+                </div>
+                <div class="clearfix"></div>
+                <br>
+
+                 
+<script>
+    Highcharts.chart('curvas', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Rating Riesgo Formalizado'
+        },
+        subtitle: {
+            text: false
+        },
+        xAxis: {
+            type: 'money',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            type: 'money',
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+            plotBands: [{ // Light air
+                from: 1,
+                to: 2,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Dos',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Light breeze
+                from: 2,
+                to: 3,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Tres',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Gentle breeze
+                from: 3,
+                to: 4,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Cuatro',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Moderate breeze
+                from: 4,
+                to: 5,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Cinco',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Fresh breeze
+                from: 5,
+                to: 6,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Seis',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Strong breeze
+                from: 6,
+                to: 7,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Siete',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // High wind
+                from: 7,
+                to: 8,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Ocho',
+                    style: {
+                        color: '#606060'
+                    }
+                  } 
+                }, { // Nueve
+                from: 8,
+                to: 9,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Nueve',
+                    style: {
+                        color: '#606060'
+                    }
+                  }
+                }, { // Diez
+                from: 9,
+                to: 10,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Diez',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }]
+        },
+        series: [{
+            name: 'Monto formalizado',
+            data: [0, 4, 6, 1, 5, 6, 4, 8, 9, 8]
+
+        }, {
+            name: '# de clientes',
+            data: [1, 5, 3, 2, 5, 6, 4, 2, 2, 8]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+</script>
+<script>
+    Highcharts.chart('barrash', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Formalizado por sector'
+        },
+        subtitle: {
+            text: false
+        },
+        xAxis: {
+            categories: ['Telecomunicaciones', 'Utilities', 'Energy', 'Capital G', 'Autos', 'Consumer', 'Basic', 'Constante', 'Retail'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: false,
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Año 2017',
+            data: [12, 15, 45, 64, 126, 174, 175, 207, 354]
+        }]
+    });
+</script>

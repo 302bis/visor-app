@@ -1,0 +1,26 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+<div class="animated fadeInDown container-fluid">
+    <div class="row">
+		<div class="col-sm-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.home">Home</a></li>
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.historial">Ver historial</a></li>
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.doc-camp">Ver documentos campaña</a></li>
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.doc-adicionales">Documentos adicionales</a></li>
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.admin-proceso">Administrador de proceso</a></li>
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.texto-solicitud">Configuración texto solicitud</a></li>
+                <li ui-sref-active="active"><a ui-sref="pyme-detalle.gerente-cuenta">Configuración gerente de cuenta</a></li>
+
+                <!-- <li ui-sref-active="active"><a ui-sref="conveyor-banco.banco-3.avance-campana">Avance de campaña</a></li>-->
+            </ul>
+        </div>
+        <div class="col-sm-10">
+            <h1>LOSV811121R64, <small>Pyme test</small> <div class="btn btn-success btn-lg pull-right"> <i class="fa fa-download" aria-hidden="true"></i> Expediente operativo</div></h1>
+                
+                <div ui-view></div>
+        </div>
+	</div>
+</div>
+
+
+
