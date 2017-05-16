@@ -431,6 +431,11 @@
           templateUrl: 'app/banco-app/views/texto-solicitud.html'
       });
 
+    $stateProvider
+      .state('contingencia', {
+          url: '/contingencia',
+          templateUrl: 'app/contingencia/contingencia.html'
+      });
 
 
     $urlRouterProvider.otherwise('/');
