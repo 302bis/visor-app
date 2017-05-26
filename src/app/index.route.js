@@ -446,6 +446,11 @@
           url: '/terminos',
           templateUrl: 'app/terminos/terminos.html'
       });
+    $stateProvider
+      .state('reject', {
+          url: '/reject',
+          templateUrl: 'app/reject/reject.html'
+      });
 
     $urlRouterProvider.otherwise('/');
   }
