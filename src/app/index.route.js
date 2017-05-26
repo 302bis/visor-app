@@ -436,7 +436,16 @@
           url: '/contingencia',
           templateUrl: 'app/contingencia/contingencia.html'
       });
-
+    $stateProvider
+      .state('privacidad', {
+          url: '/privacidad',
+          templateUrl: 'app/privacidad/privacidad.html'
+      });
+    $stateProvider
+      .state('terminos', {
+          url: '/terminos',
+          templateUrl: 'app/terminos/terminos.html'
+      });
 
     $urlRouterProvider.otherwise('/');
   }

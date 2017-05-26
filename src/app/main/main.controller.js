@@ -37,3 +37,19 @@
     }
   }
 })();
+
+
+
+
+  angular
+    .module('booot')
+    .controller('AccordionDemoCtrl', AccordionDemoCtrl )
+  
+  function AccordionDemoCtrl($scope) {
+    $scope.oneAtATime = true;
+    $scope.status = {
+          isCustomHeaderOpen: false,
+          isFirstOpen: true,
+          isFirstDisabled: false
+    };
+  }
