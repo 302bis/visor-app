@@ -1,0 +1,113 @@
+<div ng-include="'app/components/menu/menu.html'"></div>
+
+<div class="container">
+    <div class="col-xs-8 col-sm-8 col-md-8">
+        <br class="hidden-xs hidden-sm">
+        <br class="hidden-xs hidden-sm">
+        <h2>
+            Lo sentimos, Bx+ ha decidido declinar su solicitud de crédito por la siguiente razón:
+        </h2>
+        <div class="well">
+            El cronograma de ingresos no está claro.
+        </div>
+        <h4>
+            Recomendamos tomar las siguientes acciones:
+        </h4>
+        
+
+        <ul>
+            <li>Solicitar un financiamiento menor a 1,000,000.00 de pesos</li>
+            <li>Monitorear los egresos vs ingresos por 3 meses</li>
+            <li>Consultar nuevamente el buró de crédito en 3 meses</li>
+        </ul>
+        ¿Deseas que Visor te contacte para nuevas oportunidades de financiamiento?
+        <br><br>
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Sí por favor, muestrenme más oportunidades</button>
+                <input type="checkbox" class="hidden" />
+            </span>
+    </div>
+
+    <div class="col-xs-4 col-sm-4 col-md-4">
+        <img class="img-responsive image-no" src="assets/images/icono-no-application.svg" alt="">
+    </div>
+</div>
+
+<style>
+.image-no{
+    min-height: 150px;
+    margin: 10% auto 0 auto;
+    max-height: 300px;
+}
+</style>
+
+<script>
+$(function () {
+    $('.button-checkbox').each(function () {
+
+        // Settings
+        var $widget = $(this),
+            $button = $widget.find('button'),
+            $checkbox = $widget.find('input:checkbox'),
+            color = $button.data('color'),
+            settings = {
+                on: {
+                    icon: 'fa fa-check-square-o'
+                },
+                off: {
+                    icon: 'fa fa-square-o'
+                }
+            };
+
+        // Event Handlers
+        $button.on('click', function () {
+            $checkbox.prop('checked', !$checkbox.is(':checked'));
+            $checkbox.triggerHandler('change');
+            updateDisplay();
+        });
+        $checkbox.on('change', function () {
+            updateDisplay();
+        });
+
+        // Actions
+        function updateDisplay() {
+            var isChecked = $checkbox.is(':checked');
+
+            // Set the button's state
+            $button.data('state', (isChecked) ? "on" : "off");
+
+            // Set the button's icon
+            $button.find('.state-icon')
+                .removeClass()
+                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+            // Update the button's color
+            if (isChecked) {
+                $button
+                    .removeClass('btn-default')
+                    .addClass('btn-' + color + ' active');
+            }
+            else {
+                $button
+                    .removeClass('btn-' + color + ' active')
+                    .addClass('btn-default');
+            }
+        }
+
+        // Initialization
+        function init() {
+
+            updateDisplay();
+
+            // Inject the icon if applicable
+            if ($button.find('.state-icon').length == 0) {
+                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+            }
+        }
+        init();
+    });
+});
+</script>
+
+
+

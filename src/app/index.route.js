@@ -94,6 +94,16 @@
           templateUrl: 'app/solicitud/solicitud.html'
       });
     $stateProvider
+      .state('nps', {
+          url: '/nps',
+          templateUrl: 'app/nps/solicitud.html'
+      });
+    $stateProvider
+      .state('nps-gracias', {
+          url: '/nps-gracias',
+          templateUrl: 'app/nps/solicitud-gracias.html'
+      });
+    $stateProvider
       .state('comparision', {
           url: '/comparision',
           templateUrl: 'app/comparision/comparision.html'
