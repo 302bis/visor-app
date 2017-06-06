@@ -1,7 +1,7 @@
 <div ng-include="'app/components/menu/menu.html'"></div>
-<div class="overlay" id="overlay">
+<div class="overlay text-center" id="overlay">
     <div>
-        <h1 class="text-center">¿Qué tan sencillo fue completar el <br>perfil de cliente Visor?</h1>
+        <h1 class="">¿Recomendarías Visor a tus clientes, <br>socios y proveedores?</h1>
         <br>
         <br>
         <div class="stars text-center">
@@ -28,6 +28,8 @@
             <div class="form-group">
                 <h4 for="comment">Deseas dejar algún comentario?</h4>
                 <textarea class="form-control" rows="5" id="comment"></textarea>
+                <br>
+                <div ui-sref="nps-gracias-gracias" class="btn btn-success pull-right">Guardar</div>
             </div>
         </div>
         <div class="clearfix"></div>
