@@ -25,7 +25,7 @@
                             </div>
                         </span>
 
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                             <!-- Tab content goes here -->
                             Completar todos los datos del representante legal.
@@ -43,7 +43,7 @@
                         </div>
                     </span>
 
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                             <!-- Tab content goes here -->
                             En este apartado, hay que agregar todos los datos relativos a la empresa.
@@ -131,7 +131,7 @@
                         <!-- content goes here -->
                         <div class="tab-featured-image">
                             <div class="tab-content">
-                                <div class="tab-pane  in active" id="tab1">
+                                <div class="tab-pane" id="tab1">
                                     <div class="col-md-5">
                                         <form>
                                             <div class="form-group">
@@ -187,52 +187,13 @@
                                         <button type="submit" class="btn btn-success pull-right">Siguiente</button>
                                     </div>
                                 </div>
-                                <div class="tab-pane " id="tab2">
+                                <div class="tab-pane  in active" id="tab2">
 
                                     <div class="col-md-5">
                                         <form>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Razón social</label>
                                                 <input type="text" class="form-control" placeholder="Nombre legal de la empresa">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Calle</label>
-                                                <input type="text" class="form-control" placeholder="Nombre de la calle">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Número exterior</label>
-                                                <input type="text" class="form-control" placeholder="Número exterior">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Número interior</label>
-                                                <input type="text" class="form-control" placeholder="Número interior">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Colonia</label>
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Delegación</label>
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Estado</label>
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Código postal</label>
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-
-
-                                        </form>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Giro</label>
-                                                <input type="text" class="form-control" placeholder="">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Antigüedad</label>
@@ -242,20 +203,107 @@
                                                 <label for="exampleInputEmail1">Admin</label>
                                                 <input type="text" class="form-control" placeholder="">
                                             </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Giro</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Empleados</label>
                                                 <input type="text" class="form-control" placeholder="0 a 99">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Banco</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Servicios</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
-                                            </div>
+                                            
                                         </form>
                                     </div>
+                                    <div class="clearfix"></div>
+                                    
+                                    <h3>Bancos <i class="fa fa-plus-circle fa-lg"></i></h3>
+                                    <hr>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Banco </label>
+                                            <div class="ng-cloak" ng-controller="banklist as ctrl">
+                                                <ui-select ng-model="ctrl.bank.selected" theme="selectize" ng-disabled="ctrl.disabled" title="Choose a country">
+                                                    <ui-select-match placeholder="Escriba o seleccione un banco de la lista...">{{$select.selected.name}}</ui-select-match>
+                                                    <ui-select-choices repeat="bank in ctrl.banks | filter: $select.search">
+                                                    <span ng-bind-html="bank.name | highlight: $select.search"></span>
+                                                    <small ng-bind-html="bank.code | highlight: $select.search"></small>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group" ng-controller="TagsInput">
+                                                <label for="exampleInputEmail1">Servicios</label>
+                                                <tags-input ng-model="tags" display-property="name" placeholder="Agrega un servicio" replace-spaces-with-dashes="false">
+                                                <auto-complete  source="loadServices($query)"
+                                                                min-length="0"
+                                                                load-on-focus="true"
+                                                                load-on-empty="true"
+                                                                max-results-to-show="8 "
+                                                                template="campos-semanticos">
+                                                </auto-complete>
+                                                </tags-input>
+                                                <script type="text/ng-template" id="campos-semanticos">
+                                                <div class="right-panel">
+                                                    <span ng-bind-html="$highlight($getDisplayText())"></span>
+                                                </div>
+                                                </script>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <h3>Domicilio</h3>
+                                    <hr>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Calle</label>
+                                                <input type="text" class="form-control" placeholder="Nombre de la calle">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Número interior</label>
+                                                <input type="text" class="form-control" placeholder="Número interior">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Delegación</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+
+                                            
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Código postal</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Número exterior</label>
+                                                <input type="text" class="form-control" placeholder="Número exterior">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Colonia</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Estado</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+                                    </div>
+
+                                    
+
+
+
+
+
+
+
+
                                     <div class="clearfix"></div>
                                     <div class="col-md-10">
                                         <button type="submit" class="btn btn-success pull-right">Siguiente</button>

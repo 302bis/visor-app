@@ -6,13 +6,15 @@
       'ngAnimate', 
       'ngCookies', 
       'ngTouch', 
-      'ngSanitize', 
+      'ngSanitize',
       'ngMessages', 
       'ngAria', 
       'ui.router', 
       'ui.bootstrap', 
       'textAngular',
-      'toastr'
+      'toastr',
+      'ngTagsInput',
+      'ui.select'
       ]);
 
 })();
