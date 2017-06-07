@@ -14,6 +14,9 @@
       'textAngular',
       'toastr',
       'ngTagsInput',
+      'angular-tour',
+      'ng-walkthrough',
+      'ngOnboarding',
       'ui.select'
       ]);
 

@@ -48,6 +48,9 @@
     "http-proxy-middleware": "~0.9.0",
     "chalk": "~1.1.1",
     "angular-ui-select": "0.19.8",
+    "angular-tour":"0.2.5",
+    "angular-walkthrough":"1.0.2",
+    "ngOnboarding":"0.1.7",
     "uglify-save-license": "~0.4.1"
   },
   "engines": {

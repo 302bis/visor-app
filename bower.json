@@ -5,7 +5,7 @@
     "angular-animate": "~1.5.3",
     "angular-cookies": "~1.5.3",
     "angular-touch": "~1.5.3",
-    "jquery": "~2.1.4",
+    "jquery": "~2.1.4", 
     "angular-sanitize": "~1.5.3",
     "angular-ui-select": "0.19.8",
     "angular-messages": "~1.5.3",
@@ -18,7 +18,10 @@
     "animate.css": "~3.4.0",
     "textAngular": "1.5.16",
     "angular": "~1.5.3",
-    "ng-tags-input": "3.2.0"
+    "ng-tags-input": "3.2.0",
+    "ng-walkthrough":"1.0.4",
+    "ngOnboarding":"0.1.7",
+    "angular-tour":"0.2.5"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"
