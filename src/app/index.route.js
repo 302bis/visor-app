@@ -471,6 +471,33 @@
           url: '/reject',
           templateUrl: 'app/reject/reject.html'
       });
+    $stateProvider
+      .state('uber', {
+          url: '/uber',
+          templateUrl: 'app/uber/uber.html'
+      });
+      $stateProvider
+        .state('recupera_ciec_1', {
+            url: '/mail-1',
+            templateUrl: 'app/recupera_ciec/mail-1.html'
+        });
+      $stateProvider
+        .state('recupera_ciec_2', {
+            url: '/mail-2',
+            templateUrl: 'app/recupera_ciec/mail-2.html'
+        });
+      $stateProvider
+        .state('recupera_ciec_3', {
+            url: '/mail-3',
+            templateUrl: 'app/recupera_ciec/mail-3.html'
+        });
+          
+
+      $stateProvider
+        .state('landing-amex-referal', {
+            url: '/landing-amex-referal',
+            templateUrl: 'app/landing-amex-referal/landing-amex-referal.html'
+        });
 
     $urlRouterProvider.otherwise('/');
   }
