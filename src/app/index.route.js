@@ -498,6 +498,11 @@
             url: '/landing-amex-referal',
             templateUrl: 'app/landing-amex-referal/landing-amex-referal.html'
         });
+        $stateProvider
+        .state('end-of-the-road', {
+            url: '/end-of-the-road',
+            templateUrl: 'app/end-of-the-road/index.html'
+        });
 
     $urlRouterProvider.otherwise('/');
   }
