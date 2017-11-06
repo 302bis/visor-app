@@ -504,6 +504,28 @@
             templateUrl: 'app/end-of-the-road/index.html'
         });
 
+        $stateProvider
+        .state('career', {
+          url: '/career',
+          templateUrl: 'app/career/index.html'
+        });
+        $stateProvider
+        .state('job-postition', {
+          url: '/job-postition',
+          templateUrl: 'app/career/job-postition.html'
+        });
+        $stateProvider
+        .state('pupups-estados', {
+          url: '/pupups-estados',
+          templateUrl: 'app/pupups-estados/index.html'
+        });
+
+        $stateProvider
+        .state('pre-solicitud', {
+          url: '/pre-solicitud',
+          templateUrl: 'app/pre-solicitud/pre-solicitud.html'
+        });
+
     $urlRouterProvider.otherwise('/');
   }
 
